@@ -46,6 +46,52 @@ class DTSalesReceiptTests: XCTestCase
         
         XCTAssertEqual(pkcs?.payloadData?.length, 2833)
     }
+
+    func testDecodeRegularReceipt()
+    {
+        let data = dataForTestResource("receipt", ofType: "pk7")!
+        let pkcs = PKCS7Container(data: data)
+        guard let payload = pkcs?.payloadData
+            else
+        {
+            XCTFail()
+            return
+        }
+        
+        guard let receipt = SalesReceipt(data: payload)
+            else
+        {
+            XCTFail("Error parsing receipt")
+            return
+        }
+        
+        XCTAssertEqual(receipt.bundleIdentifier, "com.cocoanetics.EmmiView")
+        XCTAssertEqual(receipt.appVersion, "238")
+        XCTAssertEqual(receipt.originalAppVersion, "1.0")
+    }
+    
+    func testDecodeSandboxReceipt()
+    {
+        let data = dataForTestResource("sandboxReceipt", ofType: nil)!
+        let pkcs = PKCS7Container(data: data)
+        guard let payload = pkcs?.payloadData
+        else
+        {
+            XCTFail()
+            return
+        }
+        
+        guard let receipt = SalesReceipt(data: payload)
+        else
+        {
+            XCTFail("Error parsing receipt")
+            return
+        }
+        
+        XCTAssertEqual(receipt.bundleIdentifier, "com.cocoanetics.EmmiView")
+        XCTAssertEqual(receipt.appVersion, "246")
+        XCTAssertEqual(receipt.originalAppVersion, "1.0")
+    }
     
     // MARK: - Helper
     

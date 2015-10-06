@@ -16,7 +16,10 @@ public class PKCS7Container: NSObject, DTASN1ParserDelegate
      The data of the payload
     */
     private(set) public var payloadData: NSData!
- 
+    
+    /**
+     Internal Variable for parsing
+    */
     var _objectIdentifier: String?
     
     /**
@@ -47,12 +50,13 @@ public class PKCS7Container: NSObject, DTASN1ParserDelegate
         _objectIdentifier = nil
     }
     
-    public func parser(parser: DTASN1Parser!, foundObjectIdentifier objIdentifier: String!) {
+    public func parser(parser: DTASN1Parser!, foundObjectIdentifier objIdentifier: String!)
+    {
         _objectIdentifier = objIdentifier
     }
     
-    
-    public func parser(parser: DTASN1Parser!, foundData data: NSData!) {
+    public func parser(parser: DTASN1Parser!, foundData data: NSData!)
+    {
         if let objectID = _objectIdentifier where objectID == "1.2.840.113549.1.7.1"
         {
             // make a copy of the data if it is immutable
