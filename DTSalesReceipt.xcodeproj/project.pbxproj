@@ -7,28 +7,250 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A79541C51BC3FA2000EC73B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79541C41BC3FA2000EC73B1 /* AppDelegate.swift */; };
-		A79541C71BC3FA2000EC73B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79541C61BC3FA2000EC73B1 /* ViewController.swift */; };
-		A79541CA1BC3FA2000EC73B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79541C81BC3FA2000EC73B1 /* Main.storyboard */; };
-		A79541CC1BC3FA2000EC73B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79541CB1BC3FA2000EC73B1 /* Assets.xcassets */; };
-		A79541CF1BC3FA2000EC73B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79541CD1BC3FA2000EC73B1 /* LaunchScreen.storyboard */; };
+		A79544661BC3FC1600EC73B1 /* DTSalesReceipt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* DTSalesReceipt.framework */; settings = {ASSET_TAGS = (); }; };
+		A79544951BC3FC7F00EC73B1 /* SalesReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */; settings = {ASSET_TAGS = (); }; };
+		A79544991BC3FE7100EC73B1 /* DTSalesReceiptTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544971BC3FE5A00EC73B1 /* DTSalesReceiptTest.swift */; settings = {ASSET_TAGS = (); }; };
+		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; settings = {ASSET_TAGS = (); }; };
+		A795449B1BC3FFBC00EC73B1 /* receipt.pk7 in Resources */ = {isa = PBXBuildFile; fileRef = A79544761BC3FC5D00EC73B1 /* receipt.pk7 */; settings = {ASSET_TAGS = (); }; };
+		A795449D1BC405FC00EC73B1 /* DTSalesReceipt.h in Headers */ = {isa = PBXBuildFile; fileRef = A795447A1BC3FC5D00EC73B1 /* DTSalesReceipt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; };
+		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A79543FC1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70B4CE71486637E00873A4A;
+			remoteInfo = "Static Library";
+		};
+		A79543FE1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 384470EB1BA3330F0037C68D;
+			remoteInfo = "Static Library (tvOS)";
+		};
+		A79544001BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A710A5001607556000437D36;
+			remoteInfo = "Static Library (Mac)";
+		};
+		A79544021BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7AC21AF196417830009E1B9;
+			remoteInfo = "DTAnimatedGIF (iOS)";
+		};
+		A79544041BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A79D999C1792D1F50082BC06;
+			remoteInfo = "DTAWS (iOS)";
+		};
+		A79544061BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA9CB80C17ABDEF200A596C5;
+			remoteInfo = "DTASN1 (iOS)";
+		};
+		A79544081BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E383C2160DFEDB00CF72D6;
+			remoteInfo = "DTHTMLParser (iOS)";
+		};
+		A795440A1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7CE547166613B60028D339;
+			remoteInfo = "DTHTMLParser (Mac)";
+		};
+		A795440C1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F88FF6801920A83300120808;
+			remoteInfo = "DTProgressHUD (iOS)";
+		};
+		A795440E1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A72121DA173BFFB1003C6F0A;
+			remoteInfo = "DTReachability (iOS)";
+		};
+		A79544101BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A72121EA173BFFED003C6F0A;
+			remoteInfo = "DTReachability (Mac)";
+		};
+		A79544121BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7C92B7A174FB8900019D70A;
+			remoteInfo = "DTSQLite (iOS)";
+		};
+		A79544141BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7C92B8C174FB9720019D70A;
+			remoteInfo = "DTSQLite (Mac)";
+		};
+		A79544161BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A78220BA168060CA005B602D;
+			remoteInfo = "DTUTI (iOS)";
+		};
+		A79544181BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E889A416A9B190009EF0DF;
+			remoteInfo = "DTUTI (Mac)";
+		};
+		A795441A1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E383DA160DFF8600CF72D6;
+			remoteInfo = "DTZipArchive (iOS)";
+		};
+		A795441C1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7D8C7C21723174600025675;
+			remoteInfo = "DTZipArchive (Mac)";
+		};
+		A795441E1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A78381C31963F8D700AF09D3;
+			remoteInfo = "DTAnimatedGIF Demo";
+		};
+		A79544201BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F88FF6A51920AAB600120808;
+			remoteInfo = "DTProgressHUD Demo";
+		};
+		A79544221BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7D9D62D1758C89800C29B6F;
+			remoteInfo = "DTReachability Demo";
+		};
+		A79544241BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70D74D01743AFBC00E6E626;
+			remoteInfo = "DTSidePanels Demo";
+		};
+		A79544261BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAF37A2017AFDD93009AC27C;
+			remoteInfo = "DTZipArchive Demo";
+		};
+		A79544281BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAC284E619B84B5F0010C385;
+			remoteInfo = "DTActionSheet Demo";
+		};
+		A795442A1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7917C77191A312600964D63;
+			remoteInfo = "Unit Tests";
+		};
+		A795442C1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7EA07B81A2B2F6A00B61CCE;
+			remoteInfo = "DTFoundation (iOS)";
+		};
+		A795442E1BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7EA07391A2B215200B61CCE;
+			remoteInfo = "DTFoundation (OSX)";
+		};
+		A79544301BC3FAC400EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 384471551BA33ED80037C68D;
+			remoteInfo = "DTFoundation (tvOS)";
+		};
+		A79544671BC3FC1600EC73B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79541B91BC3FA2000EC73B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A795445B1BC3FC1600EC73B1;
+			remoteInfo = DTSalesReceipt;
+		};
+		A7D95AEA1BC40E0700AB8A21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A7EA07B71A2B2F6A00B61CCE;
+			remoteInfo = "DTFoundation (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		A79541C11BC3FA2000EC73B1 /* DTSalesReceipt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTSalesReceipt.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A79541C41BC3FA2000EC73B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A79541C61BC3FA2000EC73B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A79541C91BC3FA2000EC73B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A79541CB1BC3FA2000EC73B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A79541CE1BC3FA2000EC73B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A79541D01BC3FA2000EC73B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DTFoundation.xcodeproj; sourceTree = "<group>"; };
+		A795445C1BC3FC1600EC73B1 /* DTSalesReceipt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTSalesReceipt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79544741BC3FC5D00EC73B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79544761BC3FC5D00EC73B1 /* receipt.pk7 */ = {isa = PBXFileReference; lastKnownFileType = file; path = receipt.pk7; sourceTree = "<group>"; };
+		A79544771BC3FC5D00EC73B1 /* sandboxReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = sandboxReceipt; sourceTree = "<group>"; };
+		A795447A1BC3FC5D00EC73B1 /* DTSalesReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSalesReceipt.h; sourceTree = "<group>"; };
+		A795447B1BC3FC5D00EC73B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesReceipt.swift; sourceTree = "<group>"; };
+		A79544971BC3FE5A00EC73B1 /* DTSalesReceiptTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTSalesReceiptTest.swift; sourceTree = "<group>"; };
+		A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS7Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A79541BE1BC3FA2000EC73B1 /* Frameworks */ = {
+		A79544581BC3FC1600EC73B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79544621BC3FC1600EC73B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79544661BC3FC1600EC73B1 /* DTSalesReceipt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +260,9 @@
 		A79541B81BC3FA2000EC73B1 = {
 			isa = PBXGroup;
 			children = (
-				A79541C31BC3FA2000EC73B1 /* DTSalesReceipt */,
+				A79544791BC3FC5D00EC73B1 /* Core */,
+				A79544731BC3FC5D00EC73B1 /* Test */,
+				A79541D61BC3FAC300EC73B1 /* Externals */,
 				A79541C21BC3FA2000EC73B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,43 +270,158 @@
 		A79541C21BC3FA2000EC73B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A79541C11BC3FA2000EC73B1 /* DTSalesReceipt.app */,
+				A795445C1BC3FC1600EC73B1 /* DTSalesReceipt.framework */,
+				A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A79541C31BC3FA2000EC73B1 /* DTSalesReceipt */ = {
+		A79541D61BC3FAC300EC73B1 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
-				A79541C41BC3FA2000EC73B1 /* AppDelegate.swift */,
-				A79541C61BC3FA2000EC73B1 /* ViewController.swift */,
-				A79541C81BC3FA2000EC73B1 /* Main.storyboard */,
-				A79541CB1BC3FA2000EC73B1 /* Assets.xcassets */,
-				A79541CD1BC3FA2000EC73B1 /* LaunchScreen.storyboard */,
-				A79541D01BC3FA2000EC73B1 /* Info.plist */,
+				A79541D71BC3FAC300EC73B1 /* DTFoundation */,
 			);
-			path = DTSalesReceipt;
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		A79541D71BC3FAC300EC73B1 /* DTFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */,
+			);
+			path = DTFoundation;
+			sourceTree = "<group>";
+		};
+		A79542FB1BC3FAC400EC73B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A79543FD1BC3FAC400EC73B1 /* libDTFoundation.a */,
+				A79543FF1BC3FAC400EC73B1 /* libStatic Library (tvOS).a */,
+				A79544011BC3FAC400EC73B1 /* libDTFoundation_Mac.a */,
+				A79544031BC3FAC400EC73B1 /* libDTAnimatedGIF.a */,
+				A79544051BC3FAC400EC73B1 /* libDTAWS.a */,
+				A79544071BC3FAC400EC73B1 /* libDTASN1.a */,
+				A79544091BC3FAC400EC73B1 /* libDTHTMLParser_iOS.a */,
+				A795440B1BC3FAC400EC73B1 /* libDTHTMLParser_Mac.a */,
+				A795440D1BC3FAC400EC73B1 /* libDTProgressHUD_iOS.a */,
+				A795440F1BC3FAC400EC73B1 /* libDTReachability_iOS.a */,
+				A79544111BC3FAC400EC73B1 /* libDTReachability_Mac.a */,
+				A79544131BC3FAC400EC73B1 /* libDTSQLite_iOS.a */,
+				A79544151BC3FAC400EC73B1 /* libDTSQLite_Mac.a */,
+				A79544171BC3FAC400EC73B1 /* libDTUTI_iOS.a */,
+				A79544191BC3FAC400EC73B1 /* libDTUTI_Mac.a */,
+				A795441B1BC3FAC400EC73B1 /* libDTZipArchive_iOS.a */,
+				A795441D1BC3FAC400EC73B1 /* libDTZipArchive_Mac.a */,
+				A795441F1BC3FAC400EC73B1 /* DTAnimatedGIF Demo.app */,
+				A79544211BC3FAC400EC73B1 /* DTProgressHUD Demo.app */,
+				A79544231BC3FAC400EC73B1 /* DTReachability Demo.app */,
+				A79544251BC3FAC400EC73B1 /* DTSidePanels Demo.app */,
+				A79544271BC3FAC400EC73B1 /* DTZipArchive.app */,
+				A79544291BC3FAC400EC73B1 /* DTActionSheet Demo.app */,
+				A795442B1BC3FAC400EC73B1 /* Unit Tests.xctest */,
+				A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */,
+				A795442F1BC3FAC400EC73B1 /* DTFoundation.framework */,
+				A79544311BC3FAC400EC73B1 /* DTFoundation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A79544731BC3FC5D00EC73B1 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A79544741BC3FC5D00EC73B1 /* Info.plist */,
+				A79544961BC3FE5A00EC73B1 /* Source */,
+				A79544751BC3FC5D00EC73B1 /* Resources */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		A79544751BC3FC5D00EC73B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A79544761BC3FC5D00EC73B1 /* receipt.pk7 */,
+				A79544771BC3FC5D00EC73B1 /* sandboxReceipt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A79544791BC3FC5D00EC73B1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A795447A1BC3FC5D00EC73B1 /* DTSalesReceipt.h */,
+				A795447B1BC3FC5D00EC73B1 /* Info.plist */,
+				A795447C1BC3FC5D00EC73B1 /* Source */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A795447C1BC3FC5D00EC73B1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */,
+				A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A79544961BC3FE5A00EC73B1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A79544971BC3FE5A00EC73B1 /* DTSalesReceiptTest.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A79544591BC3FC1600EC73B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A795449D1BC405FC00EC73B1 /* DTSalesReceipt.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		A79541C01BC3FA2000EC73B1 /* DTSalesReceipt */ = {
+		A795445B1BC3FC1600EC73B1 /* DTSalesReceipt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A79541D31BC3FA2000EC73B1 /* Build configuration list for PBXNativeTarget "DTSalesReceipt" */;
+			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "DTSalesReceipt" */;
 			buildPhases = (
-				A79541BD1BC3FA2000EC73B1 /* Sources */,
-				A79541BE1BC3FA2000EC73B1 /* Frameworks */,
-				A79541BF1BC3FA2000EC73B1 /* Resources */,
+				A79544571BC3FC1600EC73B1 /* Sources */,
+				A79544581BC3FC1600EC73B1 /* Frameworks */,
+				A79544591BC3FC1600EC73B1 /* Headers */,
+				A795445A1BC3FC1600EC73B1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A7D95AEB1BC40E0700AB8A21 /* PBXTargetDependency */,
 			);
 			name = DTSalesReceipt;
 			productName = DTSalesReceipt;
-			productReference = A79541C11BC3FA2000EC73B1 /* DTSalesReceipt.app */;
-			productType = "com.apple.product-type.application";
+			productReference = A795445C1BC3FC1600EC73B1 /* DTSalesReceipt.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A79544641BC3FC1600EC73B1 /* Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79544701BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildPhases = (
+				A79544611BC3FC1600EC73B1 /* Sources */,
+				A79544621BC3FC1600EC73B1 /* Frameworks */,
+				A79544631BC3FC1600EC73B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A79544681BC3FC1600EC73B1 /* PBXTargetDependency */,
+			);
+			name = "Unit Tests";
+			productName = DTSalesReceiptTests;
+			productReference = A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,7 +432,10 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Oliver Drobnik";
 				TargetAttributes = {
-					A79541C01BC3FA2000EC73B1 = {
+					A795445B1BC3FC1600EC73B1 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					A79544641BC3FC1600EC73B1 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -109,56 +451,263 @@
 			mainGroup = A79541B81BC3FA2000EC73B1;
 			productRefGroup = A79541C21BC3FA2000EC73B1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A79542FB1BC3FAC400EC73B1 /* Products */;
+					ProjectRef = A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				A79541C01BC3FA2000EC73B1 /* DTSalesReceipt */,
+				A795445B1BC3FC1600EC73B1 /* DTSalesReceipt */,
+				A79544641BC3FC1600EC73B1 /* Unit Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A79543FD1BC3FAC400EC73B1 /* libDTFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTFoundation.a;
+			remoteRef = A79543FC1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79543FF1BC3FAC400EC73B1 /* libStatic Library (tvOS).a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libStatic Library (tvOS).a";
+			remoteRef = A79543FE1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544011BC3FAC400EC73B1 /* libDTFoundation_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTFoundation_Mac.a;
+			remoteRef = A79544001BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544031BC3FAC400EC73B1 /* libDTAnimatedGIF.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTAnimatedGIF.a;
+			remoteRef = A79544021BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544051BC3FAC400EC73B1 /* libDTAWS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTAWS.a;
+			remoteRef = A79544041BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544071BC3FAC400EC73B1 /* libDTASN1.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTASN1.a;
+			remoteRef = A79544061BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544091BC3FAC400EC73B1 /* libDTHTMLParser_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTHTMLParser_iOS.a;
+			remoteRef = A79544081BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795440B1BC3FAC400EC73B1 /* libDTHTMLParser_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTHTMLParser_Mac.a;
+			remoteRef = A795440A1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795440D1BC3FAC400EC73B1 /* libDTProgressHUD_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTProgressHUD_iOS.a;
+			remoteRef = A795440C1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795440F1BC3FAC400EC73B1 /* libDTReachability_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTReachability_iOS.a;
+			remoteRef = A795440E1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544111BC3FAC400EC73B1 /* libDTReachability_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTReachability_Mac.a;
+			remoteRef = A79544101BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544131BC3FAC400EC73B1 /* libDTSQLite_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTSQLite_iOS.a;
+			remoteRef = A79544121BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544151BC3FAC400EC73B1 /* libDTSQLite_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTSQLite_Mac.a;
+			remoteRef = A79544141BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544171BC3FAC400EC73B1 /* libDTUTI_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTUTI_iOS.a;
+			remoteRef = A79544161BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544191BC3FAC400EC73B1 /* libDTUTI_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTUTI_Mac.a;
+			remoteRef = A79544181BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795441B1BC3FAC400EC73B1 /* libDTZipArchive_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTZipArchive_iOS.a;
+			remoteRef = A795441A1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795441D1BC3FAC400EC73B1 /* libDTZipArchive_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTZipArchive_Mac.a;
+			remoteRef = A795441C1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795441F1BC3FAC400EC73B1 /* DTAnimatedGIF Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTAnimatedGIF Demo.app";
+			remoteRef = A795441E1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544211BC3FAC400EC73B1 /* DTProgressHUD Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTProgressHUD Demo.app";
+			remoteRef = A79544201BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544231BC3FAC400EC73B1 /* DTReachability Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTReachability Demo.app";
+			remoteRef = A79544221BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544251BC3FAC400EC73B1 /* DTSidePanels Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTSidePanels Demo.app";
+			remoteRef = A79544241BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544271BC3FAC400EC73B1 /* DTZipArchive.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DTZipArchive.app;
+			remoteRef = A79544261BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544291BC3FAC400EC73B1 /* DTActionSheet Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTActionSheet Demo.app";
+			remoteRef = A79544281BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795442B1BC3FAC400EC73B1 /* Unit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit Tests.xctest";
+			remoteRef = A795442A1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTFoundation.framework;
+			remoteRef = A795442C1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A795442F1BC3FAC400EC73B1 /* DTFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTFoundation.framework;
+			remoteRef = A795442E1BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A79544311BC3FAC400EC73B1 /* DTFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTFoundation.framework;
+			remoteRef = A79544301BC3FAC400EC73B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
-		A79541BF1BC3FA2000EC73B1 /* Resources */ = {
+		A795445A1BC3FC1600EC73B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79541CF1BC3FA2000EC73B1 /* LaunchScreen.storyboard in Resources */,
-				A79541CC1BC3FA2000EC73B1 /* Assets.xcassets in Resources */,
-				A79541CA1BC3FA2000EC73B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79544631BC3FC1600EC73B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */,
+				A795449B1BC3FFBC00EC73B1 /* receipt.pk7 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A79541BD1BC3FA2000EC73B1 /* Sources */ = {
+		A79544571BC3FC1600EC73B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79541C71BC3FA2000EC73B1 /* ViewController.swift in Sources */,
-				A79541C51BC3FA2000EC73B1 /* AppDelegate.swift in Sources */,
+				A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */,
+				A79544951BC3FC7F00EC73B1 /* SalesReceipt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79544611BC3FC1600EC73B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79544991BC3FE7100EC73B1 /* DTSalesReceiptTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		A79541C81BC3FA2000EC73B1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A79541C91BC3FA2000EC73B1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		A79544681BC3FC1600EC73B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A795445B1BC3FC1600EC73B1 /* DTSalesReceipt */;
+			targetProxy = A79544671BC3FC1600EC73B1 /* PBXContainerItemProxy */;
 		};
-		A79541CD1BC3FA2000EC73B1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A79541CE1BC3FA2000EC73B1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+		A7D95AEB1BC40E0700AB8A21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DTFoundation (iOS)";
+			targetProxy = A7D95AEA1BC40E0700AB8A21 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A79541D11BC3FA2000EC73B1 /* Debug */ = {
@@ -244,24 +793,60 @@
 			};
 			name = Release;
 		};
-		A79541D41BC3FA2000EC73B1 /* Debug */ = {
+		A795446E1BC3FC1600EC73B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DTSalesReceipt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
+				PRODUCT_NAME = DTSalesReceipt;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A795446F1BC3FC1600EC73B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Core/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
+				PRODUCT_NAME = DTSalesReceipt;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A79544711BC3FC1600EC73B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceiptTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		A79541D51BC3FA2000EC73B1 /* Release */ = {
+		A79544721BC3FC1600EC73B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DTSalesReceipt/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
+				INFOPLIST_FILE = Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceiptTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -278,13 +863,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A79541D31BC3FA2000EC73B1 /* Build configuration list for PBXNativeTarget "DTSalesReceipt" */ = {
+		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "DTSalesReceipt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A79541D41BC3FA2000EC73B1 /* Debug */,
-				A79541D51BC3FA2000EC73B1 /* Release */,
+				A795446E1BC3FC1600EC73B1 /* Debug */,
+				A795446F1BC3FC1600EC73B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79544701BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79544711BC3FC1600EC73B1 /* Debug */,
+				A79544721BC3FC1600EC73B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
