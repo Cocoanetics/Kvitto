@@ -1,6 +1,6 @@
 //
 //  SalesReceipt.swift
-//  DTSalesReceipt
+//  Kvitto
 //
 //  Created by Oliver Drobnik on 06/10/15.
 //  Copyright © 2015 Oliver Drobnik. All rights reserved.
@@ -80,7 +80,7 @@ public class SalesReceipt: NSObject, DTASN1ParserDelegate
     
     The in-app purchase receipt for a non-consumable product, auto-renewable subscription, non-renewing subscription, or free subscription remains in the receipt indefinitely.
     */
-    private(set) public var inAppPurchaseReceipts: [AnyObject]?
+    private(set) public var inAppPurchaseReceipts: [InAppPurchaseReceipt]?
     
     
     /**
@@ -150,14 +150,18 @@ public class SalesReceipt: NSObject, DTASN1ParserDelegate
                 receiptCreationDate = _dateFromData(data)
             
             case 17:
+                guard let IAP = InAppPurchaseReceipt(data: data)
+                else
+                {
+                    return
+                }
+                
                 if inAppPurchaseReceipts == nil
                 {
                     inAppPurchaseReceipts = []
-
-                    // TODO: Implement IAP
-//                    InAppPurchaseReceipt *receipt = [[InAppPurchaseReceipt alloc] initWithData:data];
-//                    [_inAppPurchaseReceipts addObject:receipt];
                 }
+                
+                inAppPurchaseReceipts!.append(IAP)
             
             case 18:
                 unknownPurposeDate = _dateFromData(data)

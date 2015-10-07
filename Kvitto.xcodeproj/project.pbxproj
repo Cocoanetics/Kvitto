@@ -13,6 +13,7 @@
 		A795449B1BC3FFBC00EC73B1 /* receipt.pk7 in Resources */ = {isa = PBXBuildFile; fileRef = A79544761BC3FC5D00EC73B1 /* receipt.pk7 */; settings = {ASSET_TAGS = (); }; };
 		A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; };
 		A7D95B111BC438D200AB8A21 /* DTSalesReceiptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* DTSalesReceiptTests.swift */; settings = {ASSET_TAGS = (); }; };
+		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; settings = {ASSET_TAGS = (); }; };
 		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -233,6 +234,7 @@
 		A7D95B0A1BC437F700AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B0B1BC4387A00AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B101BC438D200AB8A21 /* DTSalesReceiptTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTSalesReceiptTests.swift; sourceTree = "<group>"; };
+		A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseReceipt.swift; sourceTree = "<group>"; };
 		A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS7Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -357,8 +359,9 @@
 		A795447C1BC3FC5D00EC73B1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */,
 				A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */,
+				A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */,
+				A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */,
+				A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */,
 				A79544951BC3FC7F00EC73B1 /* SalesReceipt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

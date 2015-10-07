@@ -76,6 +76,21 @@ class DTSalesReceiptTests: XCTestCase
         XCTAssertNotNil(receipt.receiptCreationDate)
         XCTAssertEqual(receipt.ageRating, "4+")
         XCTAssertEqual(receipt.receiptType, "ProductionSandbox")
+        
+        guard let iap = receipt.inAppPurchaseReceipts?.first
+        else
+        {
+            XCTFail("No IAP decoded")
+            return
+        }
+        
+        XCTAssertEqual(iap.productIdentifier, "com.cocoanetics.EmmiView.OneMonth")
+        XCTAssertEqual(iap.transactionIdentifier, "1000000156444989")
+        XCTAssertEqual(iap.originalTransactionIdentifier, "1000000156444989")
+        XCTAssertNotNil(iap.subscriptionExpirationDate)
+        XCTAssertNotNil(iap.webOrderLineItemIdentifier)
+        XCTAssertNotNil(iap.purchaseDate)
+        XCTAssertNil(iap.cancellationDate)
     }
     
     func testDecodeSandboxReceipt()
@@ -105,6 +120,21 @@ class DTSalesReceiptTests: XCTestCase
         XCTAssertNotNil(receipt.receiptCreationDate)
         XCTAssertEqual(receipt.ageRating, "4+")
         XCTAssertEqual(receipt.receiptType, "ProductionSandbox")
+        
+        guard let iap = receipt.inAppPurchaseReceipts?.first
+            else
+        {
+            XCTFail("No IAP decoded")
+            return
+        }
+        
+        XCTAssertEqual(iap.productIdentifier, "com.cocoanetics.EmmiView.OneMonth")
+        XCTAssertEqual(iap.transactionIdentifier, "1000000156449405")
+        XCTAssertEqual(iap.originalTransactionIdentifier, "1000000156444989")
+        XCTAssertNotNil(iap.subscriptionExpirationDate)
+        XCTAssertNotNil(iap.webOrderLineItemIdentifier)
+        XCTAssertNotNil(iap.purchaseDate)
+        XCTAssertNil(iap.cancellationDate)
     }
     
     // MARK: - Helper

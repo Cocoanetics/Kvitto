@@ -1,6 +1,6 @@
 //
 //  PKCS7Container.swift
-//  DTSalesReceipt
+//  Kvitto
 //
 //  Created by Oliver Drobnik on 06/10/15.
 //  Copyright © 2015 Oliver Drobnik. All rights reserved.
