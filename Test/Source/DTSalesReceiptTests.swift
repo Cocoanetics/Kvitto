@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import DTFoundation
+
 @testable import Kvitto
 
 class DTSalesReceiptTests: XCTestCase
@@ -68,6 +70,12 @@ class DTSalesReceiptTests: XCTestCase
         XCTAssertEqual(receipt.bundleIdentifier, "com.cocoanetics.EmmiView")
         XCTAssertEqual(receipt.appVersion, "238")
         XCTAssertEqual(receipt.originalAppVersion, "1.0")
+        XCTAssertEqual(receipt.opaqueValue?.length, 16)
+        XCTAssertEqual(receipt.SHA1Hash?.length, 20)
+        XCTAssertNil(receipt.receiptExpirationDate)
+        XCTAssertNotNil(receipt.receiptCreationDate)
+        XCTAssertEqual(receipt.ageRating, "4+")
+        XCTAssertEqual(receipt.receiptType, "ProductionSandbox")
     }
     
     func testDecodeSandboxReceipt()
@@ -91,6 +99,12 @@ class DTSalesReceiptTests: XCTestCase
         XCTAssertEqual(receipt.bundleIdentifier, "com.cocoanetics.EmmiView")
         XCTAssertEqual(receipt.appVersion, "246")
         XCTAssertEqual(receipt.originalAppVersion, "1.0")
+        XCTAssertEqual(receipt.opaqueValue?.length, 16)
+        XCTAssertEqual(receipt.SHA1Hash?.length, 20)
+        XCTAssertNil(receipt.receiptExpirationDate)
+        XCTAssertNotNil(receipt.receiptCreationDate)
+        XCTAssertEqual(receipt.ageRating, "4+")
+        XCTAssertEqual(receipt.receiptType, "ProductionSandbox")
     }
     
     // MARK: - Helper
