@@ -1,0 +1,12 @@
+---
+language: objective-c
+
+install: 
+ - sudo easy_install cpp-coveralls
+
+script: 
+ - xctool -project DTFoundation.xcodeproj -scheme "Kvitto (iOS)" test -sdk iphonesimulator
+# - appledoc -o /tmp .
+
+after_success:
+  - ./coveralls.rb --extension m --exclude-folder Demo --exclude-folder Test --exclude-folder Externals
