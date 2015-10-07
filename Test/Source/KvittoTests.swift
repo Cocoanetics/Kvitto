@@ -51,16 +51,7 @@ class DTReceiptTests: XCTestCase
 
     func testDecodeRegularReceipt()
     {
-        let data = dataForTestResource("receipt", ofType: nil)!
-        let pkcs = PKCS7Container(data: data)
-        guard let payload = pkcs?.payloadData
-            else
-        {
-            XCTFail()
-            return
-        }
-        
-        guard let receipt = Receipt(data: payload)
+        guard let receipt = receiptFromTestResource("receipt", ofType: nil)
             else
         {
             XCTFail("Error parsing receipt")
@@ -81,16 +72,7 @@ class DTReceiptTests: XCTestCase
     
     func testDecodeSandboxReceipt()
     {
-        let data = dataForTestResource("sandboxReceipt", ofType: nil)!
-        let pkcs = PKCS7Container(data: data)
-        guard let payload = pkcs?.payloadData
-        else
-        {
-            XCTFail()
-            return
-        }
-        
-        guard let receipt = Receipt(data: payload)
+        guard let receipt = receiptFromTestResource("sandboxReceipt", ofType: nil)
         else
         {
             XCTFail("Error parsing receipt")
@@ -135,5 +117,12 @@ class DTReceiptTests: XCTestCase
         return NSData(contentsOfFile: path)
     }
     
-    
+    func receiptFromTestResource(name: String?, ofType ext: String?) -> Receipt?
+    {
+        let bundle = NSBundle(forClass: self.dynamicType)
+        
+        guard let URL = bundle.URLForResource(name, withExtension: ext) else { return nil }
+        
+        return Receipt(contentsOfURL: URL)
+    }
 }
