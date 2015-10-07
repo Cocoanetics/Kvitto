@@ -6,7 +6,7 @@
 //  Copyright © 2015 Oliver Drobnik. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Kvitto.
 FOUNDATION_EXPORT double KvittoVersionNumber;

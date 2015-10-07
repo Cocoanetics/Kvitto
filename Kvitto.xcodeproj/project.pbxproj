@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70247611BC56A000070DACA /* Kvitto.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D95B091BC437F700AB8A21 /* Kvitto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ASSET_TAGS = (); }; };
 		A79544951BC3FC7F00EC73B1 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* Receipt.swift */; settings = {ASSET_TAGS = (); }; };
 		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; settings = {ASSET_TAGS = (); }; };
@@ -384,6 +385,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70247611BC56A000070DACA /* Kvitto.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
