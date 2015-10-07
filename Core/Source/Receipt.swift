@@ -101,6 +101,22 @@ An iTunes store sales receipt.
             return nil
         }
     }
+
+    /** 
+    Convenience initializer. Decodes the PKCS7Container at the given file URL and decodes its payload as Receipt.
+    */
+    public convenience init?(contentsOfURL URL: NSURL)
+    {
+        guard let   data = NSData(contentsOfURL: URL),
+            container = PKCS7Container(data: data),
+            payloadData = container.payloadData
+        else
+        {
+            return nil
+        }
+        
+        self.init(data: payloadData)
+    }
     
     // MARK: Parsing
     
