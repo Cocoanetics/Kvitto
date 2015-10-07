@@ -1,0 +1,7 @@
+# .slather.yml
+
+coverage_service: coveralls
+xcodeproj: Kvitto.xcodeproj
+ignore:
+  - Test/*
+  - Demo/*
