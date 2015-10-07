@@ -12,7 +12,7 @@ import DTFoundation
 /**
 An iTunes store sales receipt.
 */
-@objc(DTReceipt) public class Receipt: NSObject
+@objc(DTReceipt) public final class Receipt: NSObject
 {
     /**
      The app’s bundle identifier. This corresponds to the value of CFBundleIdentifier in the Info.plist file.
@@ -112,26 +112,19 @@ An iTunes store sales receipt.
             throw ReceiptParsingError.InvalidRootObject
         }
         
-        for var item in rootArray
+        for var element in rootArray
         {
-            guard item.count == 3,
-                let type = (item[0] as? NSNumber)?.integerValue,
-                 version = (item[1] as? NSNumber)?.integerValue,
-                    data = item[2] as? NSData
+            guard element.count == 3,
+                let type = (element[0] as? NSNumber)?.integerValue,
+                 version = (element[1] as? NSNumber)?.integerValue,
+                    data = element[2] as? NSData
                 where version > 0
                 else
             {
                 throw ReceiptParsingError.InvalidRootObject
             }
             
-            do
-            {
-                try processItem(type, data: data)
-            }
-            catch
-            {
-                return false
-            }
+            try processItem(type, data: data)
         }
         
         return true

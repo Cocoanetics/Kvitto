@@ -12,7 +12,7 @@ import DTFoundation
 /**
  A purchase receipt for an IAP
 */
-@objc(DTInAppPurchaseReceipt) public class InAppPurchaseReceipt: NSObject
+@objc(DTInAppPurchaseReceipt) public final class InAppPurchaseReceipt: NSObject
 {
     /**
     The number of items purchased. This value corresponds to the quantity property of the SKPayment object stored in the transaction’s payment property.
@@ -112,7 +112,7 @@ import DTFoundation
         return true
     }
     
-    func processItem(type: Int, data: NSData) throws
+    private func processItem(type: Int, data: NSData) throws
     {
         switch(type)
         {
