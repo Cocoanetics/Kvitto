@@ -15,7 +15,7 @@ class DTSalesReceiptTests: XCTestCase
 {
     func testReceiptExistsInTestBundle()
     {
-        let data = dataForTestResource("receipt", ofType: "pk7")
+        let data = dataForTestResource("receipt", ofType: nil)
         XCTAssertNotNil(data)
     }
     
@@ -35,10 +35,10 @@ class DTSalesReceiptTests: XCTestCase
     
     func testDecodeReceiptPayload()
     {
-        let data = dataForTestResource("receipt", ofType: "pk7")!
+        let data = dataForTestResource("receipt", ofType: nil)!
         let pkcs = PKCS7Container(data: data)
         
-        XCTAssertEqual(pkcs?.payloadData?.length, 890)
+        XCTAssertEqual(pkcs?.payloadData?.length, 505)
     }
 
     func testDecodeSandboxReceiptPayload()
@@ -51,7 +51,7 @@ class DTSalesReceiptTests: XCTestCase
 
     func testDecodeRegularReceipt()
     {
-        let data = dataForTestResource("receipt", ofType: "pk7")!
+        let data = dataForTestResource("receipt", ofType: nil)!
         let pkcs = PKCS7Container(data: data)
         guard let payload = pkcs?.payloadData
             else
@@ -67,30 +67,16 @@ class DTSalesReceiptTests: XCTestCase
             return
         }
         
-        XCTAssertEqual(receipt.bundleIdentifier, "com.cocoanetics.EmmiView")
-        XCTAssertEqual(receipt.appVersion, "238")
-        XCTAssertEqual(receipt.originalAppVersion, "1.0")
+        XCTAssertEqual(receipt.bundleIdentifier, "com.apple.dt.Xcode")
+        XCTAssertEqual(receipt.appVersion, "7.0")
+        XCTAssertEqual(receipt.originalAppVersion, "4.3")
         XCTAssertEqual(receipt.opaqueValue?.length, 16)
         XCTAssertEqual(receipt.SHA1Hash?.length, 20)
         XCTAssertNil(receipt.receiptExpirationDate)
         XCTAssertNotNil(receipt.receiptCreationDate)
         XCTAssertEqual(receipt.ageRating, "4+")
-        XCTAssertEqual(receipt.receiptType, "ProductionSandbox")
-        
-        guard let iap = receipt.inAppPurchaseReceipts?.first
-        else
-        {
-            XCTFail("No IAP decoded")
-            return
-        }
-        
-        XCTAssertEqual(iap.productIdentifier, "com.cocoanetics.EmmiView.OneMonth")
-        XCTAssertEqual(iap.transactionIdentifier, "1000000156444989")
-        XCTAssertEqual(iap.originalTransactionIdentifier, "1000000156444989")
-        XCTAssertNotNil(iap.subscriptionExpirationDate)
-        XCTAssertNotNil(iap.webOrderLineItemIdentifier)
-        XCTAssertNotNil(iap.purchaseDate)
-        XCTAssertNil(iap.cancellationDate)
+        XCTAssertEqual(receipt.receiptType, "Production")
+        XCTAssertNil(receipt.inAppPurchaseReceipts)
     }
     
     func testDecodeSandboxReceipt()
@@ -135,6 +121,7 @@ class DTSalesReceiptTests: XCTestCase
         XCTAssertNotNil(iap.webOrderLineItemIdentifier)
         XCTAssertNotNil(iap.purchaseDate)
         XCTAssertNil(iap.cancellationDate)
+        XCTAssertEqual(iap.webOrderLineItemIdentifier, 1000000029801037)
     }
     
     // MARK: - Helper

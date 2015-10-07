@@ -9,7 +9,10 @@
 import Foundation
 import DTFoundation
 
-public class InAppPurchaseReceipt: NSObject
+/**
+ A purchase receipt for an IAP
+*/
+@objc(DTInAppPurchaseReceipt) public class InAppPurchaseReceipt: NSObject
 {
     /**
     The number of items purchased. This value corresponds to the quantity property of the SKPayment object stored in the transaction’s payment property.
@@ -62,7 +65,7 @@ public class InAppPurchaseReceipt: NSObject
     /**
     The primary key for identifying subscription purchases.
     */
-    private(set) public var webOrderLineItemIdentifier: NSData?
+    private(set) public var webOrderLineItemIdentifier: Int?
     
     /**
     The designated initializer
@@ -130,26 +133,13 @@ public class InAppPurchaseReceipt: NSObject
             subscriptionExpirationDate = _dateFromData(data)
             
         case 1711:
-            
-            let bla = DTASN1Serialization.objectWithData(data)
-            
-            let s = DTBase64Coding.stringByEncodingData(data)
-            
-            webOrderLineItemIdentifier = data
+            webOrderLineItemIdentifier = _intFromData(data)
             
         case 1712:
             cancellationDate = _dateFromData(data)
             
         default:
-            if let string = _stringFromData(data)
-            {
-                NSLog("\(type) - \(string)")
-            }
-            else if let date = _dateFromData(data)
-            {
-                NSLog("\(type) - \(date)")
-            }
-            
+            // all other types are private
             break;
         }
     }
@@ -182,6 +172,8 @@ public class InAppPurchaseReceipt: NSObject
     
     func _dateFromData(data: NSData) -> NSDate?
     {
+        let s = DTBase64Coding.stringByEncodingData(data)
+        
         guard let string = _stringFromData(data),
             date = _dateFromRFC3339String(string)
             else

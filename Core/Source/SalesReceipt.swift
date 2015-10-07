@@ -9,8 +9,10 @@
 import Foundation
 import DTFoundation
 
-@objc(DTSalesReceipt)
-public class SalesReceipt: NSObject, DTASN1ParserDelegate
+/**
+An iTunes store sales receipt.
+*/
+@objc(DTSalesReceipt) public class SalesReceipt: NSObject, DTASN1ParserDelegate
 {
     /**
      The app’s bundle identifier. This corresponds to the value of CFBundleIdentifier in the Info.plist file.
@@ -173,6 +175,7 @@ public class SalesReceipt: NSObject, DTASN1ParserDelegate
                 receiptExpirationDate = _dateFromData(data)
 
             default:
+                // all other types are private
                 break;
         }
     }

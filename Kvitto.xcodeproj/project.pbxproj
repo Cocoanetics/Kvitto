@@ -10,10 +10,10 @@
 		A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ASSET_TAGS = (); }; };
 		A79544951BC3FC7F00EC73B1 /* SalesReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */; settings = {ASSET_TAGS = (); }; };
 		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; settings = {ASSET_TAGS = (); }; };
-		A795449B1BC3FFBC00EC73B1 /* receipt.pk7 in Resources */ = {isa = PBXBuildFile; fileRef = A79544761BC3FC5D00EC73B1 /* receipt.pk7 */; settings = {ASSET_TAGS = (); }; };
 		A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; };
-		A7D95B111BC438D200AB8A21 /* DTSalesReceiptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* DTSalesReceiptTests.swift */; settings = {ASSET_TAGS = (); }; };
+		A7D95B111BC438D200AB8A21 /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; settings = {ASSET_TAGS = (); }; };
 		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; settings = {ASSET_TAGS = (); }; };
+		A7E815E31BC531AB00127748 /* receipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E815E21BC531AB00127748 /* receipt */; settings = {ASSET_TAGS = (); }; };
 		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -226,15 +226,15 @@
 /* Begin PBXFileReference section */
 		A79542FA1BC3FAC400EC73B1 /* DTFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DTFoundation.xcodeproj; sourceTree = "<group>"; };
 		A795445C1BC3FC1600EC73B1 /* Kvitto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kvitto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A79544651BC3FC1600EC73B1 /* DTSales Receipt Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DTSales Receipt Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A79544761BC3FC5D00EC73B1 /* receipt.pk7 */ = {isa = PBXFileReference; lastKnownFileType = file; path = receipt.pk7; sourceTree = "<group>"; };
+		A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79544771BC3FC5D00EC73B1 /* sandboxReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = sandboxReceipt; sourceTree = "<group>"; };
 		A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesReceipt.swift; sourceTree = "<group>"; };
 		A7D95B091BC437F700AB8A21 /* Kvitto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kvitto.h; sourceTree = "<group>"; };
 		A7D95B0A1BC437F700AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B0B1BC4387A00AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7D95B101BC438D200AB8A21 /* DTSalesReceiptTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTSalesReceiptTests.swift; sourceTree = "<group>"; };
+		A7D95B101BC438D200AB8A21 /* KvittoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KvittoTests.swift; sourceTree = "<group>"; };
 		A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseReceipt.swift; sourceTree = "<group>"; };
+		A7E815E21BC531AB00127748 /* receipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = receipt; sourceTree = "<group>"; };
 		A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS7Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				A795445C1BC3FC1600EC73B1 /* Kvitto.framework */,
-				A79544651BC3FC1600EC73B1 /* DTSales Receipt Tests.xctest */,
+				A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 		A79544751BC3FC5D00EC73B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A79544761BC3FC5D00EC73B1 /* receipt.pk7 */,
+				A7E815E21BC531AB00127748 /* receipt */,
 				A79544771BC3FC5D00EC73B1 /* sandboxReceipt */,
 			);
 			path = Resources;
@@ -369,7 +369,7 @@
 		A79544961BC3FE5A00EC73B1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A7D95B101BC438D200AB8A21 /* DTSalesReceiptTests.swift */,
+				A7D95B101BC438D200AB8A21 /* KvittoTests.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -387,9 +387,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A795445B1BC3FC1600EC73B1 /* Kvitto */ = {
+		A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */;
+			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */;
 			buildPhases = (
 				A79544571BC3FC1600EC73B1 /* Sources */,
 				A79544581BC3FC1600EC73B1 /* Frameworks */,
@@ -401,14 +401,14 @@
 			dependencies = (
 				A7D95AEB1BC40E0700AB8A21 /* PBXTargetDependency */,
 			);
-			name = Kvitto;
+			name = "Kvitto (iOS)";
 			productName = DTSalesReceipt;
 			productReference = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A79544641BC3FC1600EC73B1 /* DTSales Receipt Tests */ = {
+		A79544641BC3FC1600EC73B1 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A79544701BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "DTSales Receipt Tests" */;
+			buildConfigurationList = A79544701BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
 			buildPhases = (
 				A79544611BC3FC1600EC73B1 /* Sources */,
 				A79544621BC3FC1600EC73B1 /* Frameworks */,
@@ -419,9 +419,9 @@
 			dependencies = (
 				A79544681BC3FC1600EC73B1 /* PBXTargetDependency */,
 			);
-			name = "DTSales Receipt Tests";
+			name = "Unit Tests";
 			productName = DTSalesReceiptTests;
-			productReference = A79544651BC3FC1600EC73B1 /* DTSales Receipt Tests.xctest */;
+			productReference = A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -460,8 +460,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				A795445B1BC3FC1600EC73B1 /* Kvitto */,
-				A79544641BC3FC1600EC73B1 /* DTSales Receipt Tests */,
+				A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */,
+				A79544641BC3FC1600EC73B1 /* Unit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -670,8 +670,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E815E31BC531AB00127748 /* receipt in Resources */,
 				A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */,
-				A795449B1BC3FFBC00EC73B1 /* receipt.pk7 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D95B111BC438D200AB8A21 /* DTSalesReceiptTests.swift in Sources */,
+				A7D95B111BC438D200AB8A21 /* KvittoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +701,7 @@
 /* Begin PBXTargetDependency section */
 		A79544681BC3FC1600EC73B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A795445B1BC3FC1600EC73B1 /* Kvitto */;
+			target = A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */;
 			targetProxy = A79544671BC3FC1600EC73B1 /* PBXContainerItemProxy */;
 		};
 		A7D95AEB1BC40E0700AB8A21 /* PBXTargetDependency */ = {
@@ -865,7 +865,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */ = {
+		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A795446E1BC3FC1600EC73B1 /* Debug */,
@@ -874,7 +874,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A79544701BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "DTSales Receipt Tests" */ = {
+		A79544701BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A79544711BC3FC1600EC73B1 /* Debug */,
