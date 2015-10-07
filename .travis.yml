@@ -2,14 +2,14 @@
 language: objective-c
 osx_image: xcode7
 
-before_install: rvm use $RVM_RUBY_VERSION
-install: bundle install --without=documentation --path ../travis_bundle_dir
+before_install:
+ - brew update
+ - brew reinstall xctool
+ - gem update cocoapods
+ - gem install slather
 
 script: 
  - xctool -project Kvitto.xcodeproj -scheme "Kvitto (iOS)" test -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6'
-# - appledoc -o /tmp .
 
-after_success: slather
-
-after_success:
-  - ./coveralls.rb --extension swift --exclude-folder Demo --exclude-folder Test --exclude-folder Externals
+after_success: 
+ - slather
