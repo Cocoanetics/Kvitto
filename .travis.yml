@@ -6,7 +6,7 @@ install:
  - sudo easy_install cpp-coveralls
 
 script: 
- - xctool -project Kvitto.xcodeproj -scheme "Kvitto (iOS)" test -sdk iphonesimulator -arch x86_64
+ - xctool -project Kvitto.xcodeproj -scheme "Kvitto (iOS)" test -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6'
 # - appledoc -o /tmp .
 
 after_success:
