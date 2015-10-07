@@ -10,4 +10,4 @@ script:
 # - appledoc -o /tmp .
 
 after_success:
-  - ./coveralls.rb --extension m --exclude-folder Demo --exclude-folder Test --exclude-folder Externals
+  - ./coveralls.rb --extension swift --exclude-folder Demo --exclude-folder Test --exclude-folder Externals
