@@ -1,5 +1,5 @@
 //
-//  SalesReceipt.swift
+//  Receipt.swift
 //  Kvitto
 //
 //  Created by Oliver Drobnik on 06/10/15.
@@ -12,7 +12,7 @@ import DTFoundation
 /**
 An iTunes store sales receipt.
 */
-@objc(DTSalesReceipt) public class SalesReceipt: NSObject, DTASN1ParserDelegate
+@objc(DTReceipt) public class Receipt: NSObject
 {
     /**
      The app’s bundle identifier. This corresponds to the value of CFBundleIdentifier in the Info.plist file.
@@ -92,18 +92,24 @@ An iTunes store sales receipt.
     {
         super.init()
         
-        guard parseData(data) else { return nil }
+        do
+        {
+            try parseData(data)
+        }
+        catch
+        {
+            return nil
+        }
     }
     
     // MARK: Parsing
     
-    private func parseData(data: NSData) -> Bool
+    private func parseData(data: NSData) throws -> Bool
     {
         guard let rootArray = DTASN1Serialization.objectWithData(data) as? [[AnyObject]]
             else
         {
-            NSLog("Did not find array of arrays at root")
-            return false
+            throw ReceiptParsingError.InvalidRootObject
         }
         
         for var item in rootArray
@@ -115,29 +121,35 @@ An iTunes store sales receipt.
                 where version > 0
                 else
             {
-                NSLog("Error parsing item, expected [Int, Int, Data]")
-                return false
+                throw ReceiptParsingError.InvalidRootObject
             }
             
-            processItem(type, data: data)
+            do
+            {
+                try processItem(type, data: data)
+            }
+            catch
+            {
+                return false
+            }
         }
         
         return true
     }
     
-    func processItem(type: Int, data: NSData)
+    func processItem(type: Int, data: NSData) throws
     {
         switch(type)
         {
             case 0:
-                receiptType = _stringFromData(data)
+                receiptType = try _stringFromData(data)
             
             case 2:
-                bundleIdentifier = _stringFromData(data)
+                bundleIdentifier = try _stringFromData(data)
                 bundleIdentifierData = data
             
             case 3:
-                appVersion = _stringFromData(data)
+                appVersion = try _stringFromData(data)
 
             case 4:
                 opaqueValue = NSData(data: data)
@@ -146,16 +158,16 @@ An iTunes store sales receipt.
                 SHA1Hash = NSData(data: data)
             
             case 10:
-                ageRating = _stringFromData(data)
+                ageRating = try _stringFromData(data)
             
             case 12:
-                receiptCreationDate = _dateFromData(data)
+                receiptCreationDate = try _dateFromData(data)
             
             case 17:
                 guard let IAP = InAppPurchaseReceipt(data: data)
                 else
                 {
-                    return
+                    throw ReceiptParsingError.InvalidInAppPurchases
                 }
                 
                 if inAppPurchaseReceipts == nil
@@ -166,53 +178,17 @@ An iTunes store sales receipt.
                 inAppPurchaseReceipts!.append(IAP)
             
             case 18:
-                unknownPurposeDate = _dateFromData(data)
+                unknownPurposeDate = try _dateFromData(data)
         
             case 19:
-                originalAppVersion = _stringFromData(data)
+                originalAppVersion = try _stringFromData(data)
             
             case 21:
-                receiptExpirationDate = _dateFromData(data)
+                receiptExpirationDate = try _dateFromData(data)
 
             default:
                 // all other types are private
                 break;
         }
-    }
-    
-    // MARK: - Helpers
-    
-    func _stringFromData(data: NSData) -> String?
-    {
-        guard let string = DTASN1Serialization.objectWithData(data) as? String
-        else
-        {
-            NSLog("Cannot parse data '%@' as string", data)
-            return nil
-        }
-        
-        return string
-    }
-
-    func _dateFromData(data: NSData) -> NSDate?
-    {
-        guard let string = _stringFromData(data),
-                    date = _dateFromRFC3339String(string)
-        else
-        {
-            NSLog("Cannot parse data '%@' as date", data)
-            return nil
-        }
-        
-        return date
-    }
-    
-    func _dateFromRFC3339String(string: String) -> NSDate?
-    {
-        let rfc3339DateFormatter = NSDateFormatter()
-        rfc3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        rfc3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        rfc3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
-        return rfc3339DateFormatter.dateFromString(string)
     }
 }

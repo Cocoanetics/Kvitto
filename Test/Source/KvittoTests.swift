@@ -1,6 +1,6 @@
 //
-//  DTSalesReceiptTests.swift
-//  DTSalesReceiptTests
+//  DTReceiptTests.swift
+//  DTReceiptTests
 //
 //  Created by Oliver Drobnik on 06/10/15.
 //  Copyright © 2015 Oliver Drobnik. All rights reserved.
@@ -11,7 +11,7 @@ import DTFoundation
 
 @testable import Kvitto
 
-class DTSalesReceiptTests: XCTestCase
+class DTReceiptTests: XCTestCase
 {
     func testReceiptExistsInTestBundle()
     {
@@ -60,7 +60,7 @@ class DTSalesReceiptTests: XCTestCase
             return
         }
         
-        guard let receipt = SalesReceipt(data: payload)
+        guard let receipt = Receipt(data: payload)
             else
         {
             XCTFail("Error parsing receipt")
@@ -90,7 +90,7 @@ class DTSalesReceiptTests: XCTestCase
             return
         }
         
-        guard let receipt = SalesReceipt(data: payload)
+        guard let receipt = Receipt(data: payload)
         else
         {
             XCTFail("Error parsing receipt")

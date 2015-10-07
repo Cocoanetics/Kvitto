@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ASSET_TAGS = (); }; };
-		A79544951BC3FC7F00EC73B1 /* SalesReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */; settings = {ASSET_TAGS = (); }; };
+		A79544951BC3FC7F00EC73B1 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* Receipt.swift */; settings = {ASSET_TAGS = (); }; };
 		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; settings = {ASSET_TAGS = (); }; };
 		A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; };
 		A7D95B111BC438D200AB8A21 /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; settings = {ASSET_TAGS = (); }; };
 		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; settings = {ASSET_TAGS = (); }; };
 		A7E815E31BC531AB00127748 /* receipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E815E21BC531AB00127748 /* receipt */; settings = {ASSET_TAGS = (); }; };
+		A7E8161C1BC5390C00127748 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; settings = {ASSET_TAGS = (); }; };
 		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -228,13 +229,14 @@
 		A795445C1BC3FC1600EC73B1 /* Kvitto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kvitto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79544771BC3FC5D00EC73B1 /* sandboxReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = sandboxReceipt; sourceTree = "<group>"; };
-		A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesReceipt.swift; sourceTree = "<group>"; };
+		A79544941BC3FC7F00EC73B1 /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		A7D95B091BC437F700AB8A21 /* Kvitto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kvitto.h; sourceTree = "<group>"; };
 		A7D95B0A1BC437F700AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B0B1BC4387A00AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B101BC438D200AB8A21 /* KvittoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KvittoTests.swift; sourceTree = "<group>"; };
 		A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseReceipt.swift; sourceTree = "<group>"; };
 		A7E815E21BC531AB00127748 /* receipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = receipt; sourceTree = "<group>"; };
+		A7E8161B1BC5390C00127748 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS7Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -361,7 +363,8 @@
 			children = (
 				A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */,
 				A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */,
-				A79544941BC3FC7F00EC73B1 /* SalesReceipt.swift */,
+				A79544941BC3FC7F00EC73B1 /* Receipt.swift */,
+				A7E8161B1BC5390C00127748 /* Functions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -684,7 +687,8 @@
 			files = (
 				A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */,
 				A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */,
-				A79544951BC3FC7F00EC73B1 /* SalesReceipt.swift in Sources */,
+				A79544951BC3FC7F00EC73B1 /* Receipt.swift in Sources */,
+				A7E8161C1BC5390C00127748 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

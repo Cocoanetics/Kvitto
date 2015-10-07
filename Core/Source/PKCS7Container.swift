@@ -35,22 +35,7 @@ import DTFoundation
                     unwrappedData = unwrapRootSequence(rootSequence)
         else { return nil }
 
-        payloadData = NSData(data: unwrappedData)
-        
-        /*
-        
-        guard data.length > 0 else
-        {
-            return nil
-        }
-        
-        // create an ASN.1 parser
-        let parser = DTASN1Parser(data: data)
-        parser.delegate = self
-        
-        // parsing must succeed
-        guard parser.parse() else { return nil }
-    */
+        payloadData = unwrappedData
     }
     
     func unwrapRootSequence(sequence: [AnyObject]) -> NSData?
@@ -79,27 +64,5 @@ import DTFoundation
         }
         
         return dataSequence[0]
-    }
-    
-    
-    // MARK: DTASN1ParserDelegate
-    
-    public func parser(parser: DTASN1Parser!, didEndContainerWithType type: DTASN1Type)
-    {
-        _objectIdentifier = nil
-    }
-    
-    public func parser(parser: DTASN1Parser!, foundObjectIdentifier objIdentifier: String!)
-    {
-        _objectIdentifier = objIdentifier
-    }
-    
-    public func parser(parser: DTASN1Parser!, foundData data: NSData!)
-    {
-        if let objectID = _objectIdentifier where objectID == "1.2.840.113549.1.7.1"
-        {
-            // make a copy of the data if it is immutable
-            payloadData = NSData(data: data)
-        }
     }
 }

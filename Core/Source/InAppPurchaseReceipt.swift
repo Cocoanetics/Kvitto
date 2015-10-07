@@ -74,18 +74,24 @@ import DTFoundation
     {
         super.init()
         
-        guard parseData(data) else { return nil }
+        do
+        {
+            try parseData(data)
+        }
+        catch
+        {
+            return nil
+        }
     }
     
     // MARK: Parsing
     
-    private func parseData(data: NSData) -> Bool
+    private func parseData(data: NSData) throws -> Bool
     {
         guard let rootArray = DTASN1Serialization.objectWithData(data) as? [[AnyObject]]
             else
         {
-            NSLog("Did not find array of arrays at root")
-            return false
+            throw ReceiptParsingError.InvalidRootObject
         }
         
         for var item in rootArray
@@ -97,100 +103,49 @@ import DTFoundation
                 where version > 0
                 else
             {
-                NSLog("Error parsing item, expected [Int, Int, Data]")
-                return false
+                throw ReceiptParsingError.InvalidRootObject
             }
             
-            processItem(type, data: data)
+            try processItem(type, data: data)
         }
         
         return true
     }
     
-    func processItem(type: Int, data: NSData)
+    func processItem(type: Int, data: NSData) throws
     {
         switch(type)
         {
         case 1701:
-            quantity = _intFromData(data)
+            quantity = try _intFromData(data)
             
         case 1702:
-            productIdentifier = _stringFromData(data)
+            productIdentifier = try _stringFromData(data)
             
         case 1703:
-            transactionIdentifier = _stringFromData(data)
+            transactionIdentifier = try _stringFromData(data)
             
         case 1704:
-            purchaseDate = _dateFromData(data)
+            purchaseDate = try _dateFromData(data)
             
         case 1705:
-            originalTransactionIdentifier = _stringFromData(data)
+            originalTransactionIdentifier = try _stringFromData(data)
             
         case 1706:
-            originalPurchaseDate = _dateFromData(data)
+            originalPurchaseDate = try _dateFromData(data)
             
         case 1708:
-            subscriptionExpirationDate = _dateFromData(data)
+            subscriptionExpirationDate = try _dateFromData(data)
             
         case 1711:
-            webOrderLineItemIdentifier = _intFromData(data)
+            webOrderLineItemIdentifier = try _intFromData(data)
             
         case 1712:
-            cancellationDate = _dateFromData(data)
+            cancellationDate = try _dateFromData(data)
             
         default:
             // all other types are private
             break;
         }
-    }
-    
-    // MARK: - Helpers
-    
-    func _intFromData(data: NSData) -> Int?
-    {
-        guard let number = DTASN1Serialization.objectWithData(data) as? NSNumber
-            else
-        {
-            NSLog("Cannot parse data '%@' as number", data)
-            return nil
-        }
-        
-        return number.integerValue
-    }
-    
-    func _stringFromData(data: NSData) -> String?
-    {
-        guard let string = DTASN1Serialization.objectWithData(data) as? String
-            else
-        {
-            NSLog("Cannot parse data '%@' as string", data)
-            return nil
-        }
-        
-        return string
-    }
-    
-    func _dateFromData(data: NSData) -> NSDate?
-    {
-        let s = DTBase64Coding.stringByEncodingData(data)
-        
-        guard let string = _stringFromData(data),
-            date = _dateFromRFC3339String(string)
-            else
-        {
-            NSLog("Cannot parse data '%@' as date", data)
-            return nil
-        }
-        
-        return date
-    }
-    
-    func _dateFromRFC3339String(string: String) -> NSDate?
-    {
-        let rfc3339DateFormatter = NSDateFormatter()
-        rfc3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        rfc3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        rfc3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
-        return rfc3339DateFormatter.dateFromString(string)
     }
 }
