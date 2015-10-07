@@ -25,6 +25,7 @@
 		A7BEDD5C1BC583D000A4BFAB /* DTFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7BEDD611BC589DF00A4BFAB /* receipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E815E21BC531AB00127748 /* receipt */; settings = {ASSET_TAGS = (); }; };
 		A7BEDD7D1BC58AB000A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; settings = {ASSET_TAGS = (); }; };
+		A7BEDD7E1BC58DCC00A4BFAB /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; settings = {ASSET_TAGS = (); }; };
 		A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; };
 		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; settings = {ASSET_TAGS = (); }; };
 		A7E8161C1BC5390C00127748 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; settings = {ASSET_TAGS = (); }; };
@@ -841,6 +842,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BEDD7E1BC58DCC00A4BFAB /* KvittoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
