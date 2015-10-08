@@ -1,5 +1,5 @@
 ---
-language: objective-c
+language: swift # or objective-c
 osx_image: xcode7
 
 script: 
