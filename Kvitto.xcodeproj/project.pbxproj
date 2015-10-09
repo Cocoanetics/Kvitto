@@ -509,9 +509,9 @@
 			productReference = A70247891BC5763D0070DACA /* KvittoDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */ = {
+		A795445B1BC3FC1600EC73B1 /* Kvitto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */;
+			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */;
 			buildPhases = (
 				A79544571BC3FC1600EC73B1 /* Sources */,
 				A79544581BC3FC1600EC73B1 /* Frameworks */,
@@ -523,7 +523,7 @@
 			dependencies = (
 				A7D95AEB1BC40E0700AB8A21 /* PBXTargetDependency */,
 			);
-			name = "Kvitto (iOS)";
+			name = Kvitto;
 			productName = DTSalesReceipt;
 			productReference = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */;
 			productType = "com.apple.product-type.framework";
@@ -585,7 +585,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */,
+				A795445B1BC3FC1600EC73B1 /* Kvitto */,
 				A79544641BC3FC1600EC73B1 /* Unit Tests */,
 				A70247881BC5763D0070DACA /* Demo (iOS) */,
 			);
@@ -851,12 +851,12 @@
 /* Begin PBXTargetDependency section */
 		A70247BF1BC576470070DACA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */;
+			target = A795445B1BC3FC1600EC73B1 /* Kvitto */;
 			targetProxy = A70247BE1BC576470070DACA /* PBXContainerItemProxy */;
 		};
 		A79544681BC3FC1600EC73B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */;
+			target = A795445B1BC3FC1600EC73B1 /* Kvitto */;
 			targetProxy = A79544671BC3FC1600EC73B1 /* PBXContainerItemProxy */;
 		};
 		A7BEDD5E1BC583D000A4BFAB /* PBXTargetDependency */ = {
@@ -1167,7 +1167,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */ = {
+		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A795446E1BC3FC1600EC73B1 /* Debug */,
