@@ -6,4 +6,4 @@ script:
  - xcodebuild -project Kvitto.xcodeproj -scheme "Kvitto Unit Tests" test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -a '-o'
