@@ -6,8 +6,4 @@ script:
  - xcodebuild -project Kvitto.xcodeproj -scheme "Kvitto" -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 6 Plus' build test
 
 after_success:
-  - git ls-files
-  - ls -al
-  - echo "$PWD"
-  - echo "$TRAVIS_BUILD_DIR"
-  - bash <(curl -s https://codecov.io/bash) -d
+  - bash <(curl -s https://codecov.io/bash)
