@@ -1,14 +1,15 @@
 Kvitto
 ======
 
-(swedish)Receipt
+> "Kvitto, it means Receipt in Swedish. The trend of using Swedish words for libraries is pretty big" 
+> -- Hugo Tunius [via Twitter](https://twitter.com/K0nserv/status/651378177307226113)
 
-Allows parsing an validation of iTunes App Store receipts.
+Allows parsing an validation of iTunes App Store receipts. Receipts also contain the In App Purchase receipts. For auto-renewable subscriptions the subscription expiration date is available. 
 
 Documentation
 -------------
 
-tba
+Look at the included Demo app's [ViewController](https://github.com/Cocoanetics/Kvitto/blob/develop/Demo/Source/ViewController.m#L50-L109) to see how to load and validate a Store receipt locally. This sample is in Objective-C to demonstrate the Kvitto - although written in Swift - can also be used from Objective-C code.
 
 License
 -------

@@ -1,0 +1,8 @@
+# .slather.yml
+ci_service: travis_ci
+coverage_service: coveralls
+xcodeproj: Kvitto.xcodeproj
+source_directory: Core
+ignore:
+  - Test/*
+  - Demo/*

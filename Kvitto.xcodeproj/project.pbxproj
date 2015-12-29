@@ -23,8 +23,10 @@
 		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; settings = {ASSET_TAGS = (); }; };
 		A7BEDD541BC57E4A00A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; settings = {ASSET_TAGS = (); }; };
 		A7BEDD5C1BC583D000A4BFAB /* DTFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7BEDD611BC589DF00A4BFAB /* receipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E815E21BC531AB00127748 /* receipt */; settings = {ASSET_TAGS = (); }; };
+		A7BEDD7D1BC58AB000A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; settings = {ASSET_TAGS = (); }; };
+		A7BEDD7E1BC58DCC00A4BFAB /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; settings = {ASSET_TAGS = (); }; };
 		A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; };
-		A7D95B111BC438D200AB8A21 /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; settings = {ASSET_TAGS = (); }; };
 		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; settings = {ASSET_TAGS = (); }; };
 		A7E8161C1BC5390C00127748 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; settings = {ASSET_TAGS = (); }; };
 		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; settings = {ASSET_TAGS = (); }; };
@@ -507,9 +509,9 @@
 			productReference = A70247891BC5763D0070DACA /* KvittoDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */ = {
+		A795445B1BC3FC1600EC73B1 /* Kvitto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */;
+			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */;
 			buildPhases = (
 				A79544571BC3FC1600EC73B1 /* Sources */,
 				A79544581BC3FC1600EC73B1 /* Frameworks */,
@@ -521,7 +523,7 @@
 			dependencies = (
 				A7D95AEB1BC40E0700AB8A21 /* PBXTargetDependency */,
 			);
-			name = "Kvitto (iOS)";
+			name = Kvitto;
 			productName = DTSalesReceipt;
 			productReference = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */;
 			productType = "com.apple.product-type.framework";
@@ -583,7 +585,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */,
+				A795445B1BC3FC1600EC73B1 /* Kvitto */,
 				A79544641BC3FC1600EC73B1 /* Unit Tests */,
 				A70247881BC5763D0070DACA /* Demo (iOS) */,
 			);
@@ -806,7 +808,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BEDD7D1BC58AB000A4BFAB /* newReceipt in Resources */,
 				A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */,
+				A7BEDD611BC589DF00A4BFAB /* receipt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,7 +842,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D95B111BC438D200AB8A21 /* KvittoTests.swift in Sources */,
+				A7BEDD7E1BC58DCC00A4BFAB /* KvittoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,12 +851,12 @@
 /* Begin PBXTargetDependency section */
 		A70247BF1BC576470070DACA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */;
+			target = A795445B1BC3FC1600EC73B1 /* Kvitto */;
 			targetProxy = A70247BE1BC576470070DACA /* PBXContainerItemProxy */;
 		};
 		A79544681BC3FC1600EC73B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */;
+			target = A795445B1BC3FC1600EC73B1 /* Kvitto */;
 			targetProxy = A79544671BC3FC1600EC73B1 /* PBXContainerItemProxy */;
 		};
 		A7BEDD5E1BC583D000A4BFAB /* PBXTargetDependency */ = {
@@ -911,6 +915,8 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -923,7 +929,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -940,8 +946,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -956,8 +960,6 @@
 		A70247021BC55D4B0070DACA /* Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceiptTests;
@@ -970,9 +972,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cocoanetics.Kvitto-Demo";
 				PRODUCT_NAME = KvittoDemo;
@@ -984,9 +984,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cocoanetics.Kvitto-Demo";
 				PRODUCT_NAME = KvittoDemo;
@@ -998,9 +996,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cocoanetics.Kvitto-Demo";
 				PRODUCT_NAME = KvittoDemo;
@@ -1043,7 +1039,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1082,7 +1078,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1171,7 +1167,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */ = {
+		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A795446E1BC3FC1600EC73B1 /* Debug */,
