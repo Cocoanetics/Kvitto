@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = 'Kvitto'
   spec.version      = '1.0.1'
-  spec.summary      = ""Parse and validate iTunes App Store receipts"
+  spec.summary      = "Parse and validate iTunes App Store receipts"
   spec.homepage     = "https://github.com/Cocoanetics/Kvitto"
   spec.author       = { "Oliver Drobnik" => "oliver@cocoanetics.com" }
   spec.documentation_url = 'http://docs.cocoanetics.com/DTKeychain'
