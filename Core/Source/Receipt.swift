@@ -17,27 +17,27 @@ An iTunes store sales receipt.
     /**
      The app’s bundle identifier. This corresponds to the value of CFBundleIdentifier in the Info.plist file.
     */
-    private(set) public var bundleIdentifier: String?
+    fileprivate(set) public var bundleIdentifier: String?
     
     /**
     The app’s bundle identifier original data. This is required for validation.
     */
-    private(set) public var bundleIdentifierData: NSData?
+    fileprivate(set) public var bundleIdentifierData: Data?
     
     /**
     The app’s version number. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist.
     */
-    private(set) public var appVersion: String?
+    fileprivate(set) public var appVersion: String?
     
     /**
     An opaque value used, with other data, to compute the SHA-1 hash during validation.
     */
-    private(set) public var opaqueValue: NSData?
+    fileprivate(set) public var opaqueValue: Data?
     
     /**
     A SHA-1 hash, used to validate the receipt.
     */
-    private(set) public var SHA1Hash: NSData?
+    fileprivate(set) public var SHA1Hash: Data?
 
     /**
     The version of the app that was originally purchased. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist file when the purchase was originally made.
@@ -46,34 +46,34 @@ An iTunes store sales receipt.
     
     Receipts prior to June 20, 2013 omit this field. It is populated on all new receipts, regardless of OS version. If you need the field but it is missing, manually refresh the receipt using the SKReceiptRefreshRequest class
     */
-    private(set) public var originalAppVersion: String?
+    fileprivate(set) public var originalAppVersion: String?
     
     /**
     The date when the app receipt was created. When validating a receipt, use this date to validate the receipt’s signature.
     */
-    private(set) public var receiptCreationDate: NSDate?
+    fileprivate(set) public var receiptCreationDate: Date?
 
     /**
     The date that the app receipt expires. When validating a receipt, compare this date to the current date to determine whether the receipt is expired. Do not try to use this date to calculate any other information, such as the time remaining before expiration.
     */
-    private(set) public var receiptExpirationDate: NSDate?
+    fileprivate(set) public var receiptExpirationDate: Date?
 
     // extra string fields, not documented
     
     /**
     The app's age rating. Note: not documented
     */
-    private(set) public var ageRating: NSString?
+    fileprivate(set) public var ageRating: NSString?
     
     /**
     The type of the receipt. For example 'ProductionSandbox'. Note: not documented
     */
-    private(set) public var receiptType: NSString?
+    fileprivate(set) public var receiptType: NSString?
     
     /**
     Date with type code 18, unknown purpose
     */
-    private(set) public var unknownPurposeDate: NSDate?
+    fileprivate(set) public var unknownPurposeDate: Date?
     
     /**
     Array of InAppPurchaseReceipt objects decribing IAPs.
@@ -82,19 +82,19 @@ An iTunes store sales receipt.
     
     The in-app purchase receipt for a non-consumable product, auto-renewable subscription, non-renewing subscription, or free subscription remains in the receipt indefinitely.
     */
-    private(set) public var inAppPurchaseReceipts: [InAppPurchaseReceipt]?
+    fileprivate(set) public var inAppPurchaseReceipts: [InAppPurchaseReceipt]?
     
     
     /**
     The designated initializer
     */
-    public init?(data: NSData)
+    public init?(data: Data)
     {
         super.init()
         
         do
         {
-            try parseData(data)
+            _ = try parseData(data)
         }
         catch
         {
@@ -105,11 +105,11 @@ An iTunes store sales receipt.
     /** 
     Convenience initializer. Decodes the PKCS7Container at the given file URL and decodes its payload as Receipt.
     */
-    public convenience init?(contentsOfURL URL: NSURL)
+    public convenience init?(contentsOfURL URL: Foundation.URL)
     {
-        guard let   data = NSData(contentsOfURL: URL),
-            container = PKCS7Container(data: data),
-            payloadData = container.payloadData
+        guard let   data = try? Data(contentsOf: URL),
+            let container = PKCS7Container(data: data),
+            let payloadData = container.payloadData
         else
         {
             return nil
@@ -120,24 +120,24 @@ An iTunes store sales receipt.
     
     // MARK: Parsing
     
-    private func parseData(data: NSData) throws -> Bool
+    fileprivate func parseData(_ data: Data) throws -> Bool
     {
-        guard let rootArray = DTASN1Serialization.objectWithData(data) as? [[AnyObject]]
+        guard let rootArray = DTASN1Serialization.object(with: data) as? [[AnyObject]]
             else
         {
-            throw ReceiptParsingError.InvalidRootObject
+            throw ReceiptParsingError.invalidRootObject
         }
         
         for var element in rootArray
         {
             guard element.count == 3,
-                let type = (element[0] as? NSNumber)?.integerValue,
-                 version = (element[1] as? NSNumber)?.integerValue,
-                    data = element[2] as? NSData
-                where version > 0
+                let type = (element[0] as? NSNumber)?.intValue,
+                 let version = (element[1] as? NSNumber)?.intValue,
+                    let data = element[2] as? Data
+                , version > 0
                 else
             {
-                throw ReceiptParsingError.InvalidRootObject
+                throw ReceiptParsingError.invalidRootObject
             }
             
             try processItem(type, data: data)
@@ -146,12 +146,12 @@ An iTunes store sales receipt.
         return true
     }
     
-    func processItem(type: Int, data: NSData) throws
+    func processItem(_ type: Int, data: Data) throws
     {
         switch(type)
         {
             case 0:
-                receiptType = try _stringFromData(data)
+                receiptType = try _stringFromData(data) as NSString?
             
             case 2:
                 bundleIdentifier = try _stringFromData(data)
@@ -161,13 +161,13 @@ An iTunes store sales receipt.
                 appVersion = try _stringFromData(data)
 
             case 4:
-                opaqueValue = NSData(data: data)
+                opaqueValue = NSData(data: data) as Data
 
             case 5:
-                SHA1Hash = NSData(data: data)
+                SHA1Hash = NSData(data: data) as Data
             
             case 10:
-                ageRating = try _stringFromData(data)
+                ageRating = try _stringFromData(data) as NSString?
             
             case 12:
                 receiptCreationDate = try _dateFromData(data)
@@ -176,7 +176,7 @@ An iTunes store sales receipt.
                 guard let IAP = InAppPurchaseReceipt(data: data)
                 else
                 {
-                    throw ReceiptParsingError.InvalidInAppPurchases
+                    throw ReceiptParsingError.invalidInAppPurchases
                 }
                 
                 if inAppPurchaseReceipts == nil
