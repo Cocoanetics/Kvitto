@@ -63,12 +63,12 @@ An iTunes store sales receipt.
     /**
     The app's age rating. Note: not documented
     */
-    fileprivate(set) public var ageRating: NSString?
+    fileprivate(set) public var ageRating: String?
     
     /**
     The type of the receipt. For example 'ProductionSandbox'. Note: not documented
     */
-    fileprivate(set) public var receiptType: NSString?
+    fileprivate(set) public var receiptType: String?
     
     /**
     Date with type code 18, unknown purpose
@@ -151,7 +151,7 @@ An iTunes store sales receipt.
         switch(type)
         {
             case 0:
-                receiptType = try _stringFromData(data) as NSString?
+                receiptType = try _stringFromData(data) as String?
             
             case 2:
                 bundleIdentifier = try _stringFromData(data)
@@ -167,7 +167,7 @@ An iTunes store sales receipt.
                 SHA1Hash = NSData(data: data) as Data
             
             case 10:
-                ageRating = try _stringFromData(data) as NSString?
+                ageRating = try _stringFromData(data) as String?
             
             case 12:
                 receiptCreationDate = try _dateFromData(data)
