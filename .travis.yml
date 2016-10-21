@@ -1,9 +1,9 @@
 ---
-language: swift
+language: objective-c
 osx_image: xcode8
 
 script: 
- - xcodebuild -project Kvitto.xcodeproj -scheme "Kvitto" -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 6 Plus' build test
+ - xcodebuild -project Kvitto.xcodeproj -scheme "Kvitto" -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 6 Plus' build test | xcpretty
 
 after_success:
 #  - bash <(curl -s https://codecov.io/bash) -a '-o'
