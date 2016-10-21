@@ -12,41 +12,41 @@ import DTFoundation
 /**
 Errors which can happen during parsing
 */
-enum ReceiptParsingError: ErrorType
+enum ReceiptParsingError: Error
 {
-    case InvalidRootObject
-    case InvalidInAppPurchases
-    case CannotDecodeExpectedInt
-    case CannotDecodeExpectedString
-    case CannotDecodeDate
+    case invalidRootObject
+    case invalidInAppPurchases
+    case cannotDecodeExpectedInt
+    case cannotDecodeExpectedString
+    case cannotDecodeDate
 }
 
 /**
 Internal Helper Functions
 */
-internal func _intFromData(data: NSData) throws -> Int
+internal func _intFromData(_ data: Data) throws -> Int
 {
-    guard let number = DTASN1Serialization.objectWithData(data) as? NSNumber
+    guard let number = DTASN1Serialization.object(with: data) as? NSNumber
     else
     {
-        throw ReceiptParsingError.CannotDecodeExpectedInt
+        throw ReceiptParsingError.cannotDecodeExpectedInt
     }
     
-    return number.integerValue
+    return number.intValue
 }
 
-internal func _stringFromData(data: NSData) throws -> String
+internal func _stringFromData(_ data: Data) throws -> String
 {
-    guard let string = DTASN1Serialization.objectWithData(data) as? String
+    guard let string = DTASN1Serialization.object(with: data) as? String
     else
     {
-        throw ReceiptParsingError.CannotDecodeExpectedString
+        throw ReceiptParsingError.cannotDecodeExpectedString
     }
     
     return string
 }
 
-internal func _dateFromData(data: NSData) throws -> NSDate?
+internal func _dateFromData(_ data: Data) throws -> Date?
 {
     let string = try _stringFromData(data)
     
@@ -59,17 +59,17 @@ internal func _dateFromData(data: NSData) throws -> NSDate?
     guard let date = _dateFromRFC3339String(string)
     else
     {
-        throw ReceiptParsingError.CannotDecodeDate
+        throw ReceiptParsingError.cannotDecodeDate
     }
     
     return date
 }
 
-internal func _dateFromRFC3339String(string: String) -> NSDate?
+internal func _dateFromRFC3339String(_ string: String) -> Date?
 {
-    let rfc3339DateFormatter = NSDateFormatter()
-    rfc3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    let rfc3339DateFormatter = DateFormatter()
+    rfc3339DateFormatter.locale = Locale(identifier: "en_US_POSIX")
     rfc3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-    rfc3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
-    return rfc3339DateFormatter.dateFromString(string)
+    rfc3339DateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+    return rfc3339DateFormatter.date(from: string)
 }
