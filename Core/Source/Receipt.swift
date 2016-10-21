@@ -161,10 +161,10 @@ An iTunes store sales receipt.
                 appVersion = try _stringFromData(data)
 
             case 4:
-                opaqueValue = NSData(data: data) as Data
+                opaqueValue = Data(data)
 
             case 5:
-                SHA1Hash = NSData(data: data) as Data
+                SHA1Hash = Data(data)
             
             case 10:
                 ageRating = try _stringFromData(data) as String?
