@@ -27,7 +27,7 @@ class DTReceiptTests: XCTestCase
     
     func testEmptyData()
     {
-        let emptyData = NSData()
+        let emptyData = Data()
         let pkcs7 = PKCS7Container(data: emptyData)
         
         XCTAssertNil(pkcs7)
@@ -38,7 +38,7 @@ class DTReceiptTests: XCTestCase
         let data = dataForTestResource("receipt", ofType: nil)!
         let pkcs = PKCS7Container(data: data)
         
-        XCTAssertEqual(pkcs?.payloadData?.length, 505)
+        XCTAssertEqual(pkcs?.payloadData?.count, 505)
     }
 
     func testDecodeSandboxReceiptPayload()
@@ -46,7 +46,7 @@ class DTReceiptTests: XCTestCase
         let data = dataForTestResource("sandboxReceipt", ofType: nil)!
         let pkcs = PKCS7Container(data: data)
         
-        XCTAssertEqual(pkcs?.payloadData?.length, 2833)
+        XCTAssertEqual(pkcs?.payloadData?.count, 2833)
     }
 
     func testDecodeRegularReceipt()
@@ -61,8 +61,8 @@ class DTReceiptTests: XCTestCase
         XCTAssertEqual(receipt.bundleIdentifier, "com.apple.dt.Xcode")
         XCTAssertEqual(receipt.appVersion, "7.0")
         XCTAssertEqual(receipt.originalAppVersion, "4.3")
-        XCTAssertEqual(receipt.opaqueValue?.length, 16)
-        XCTAssertEqual(receipt.SHA1Hash?.length, 20)
+        XCTAssertEqual(receipt.opaqueValue?.count, 16)
+        XCTAssertEqual(receipt.SHA1Hash?.count, 20)
         XCTAssertNil(receipt.receiptExpirationDate)
         XCTAssertNotNil(receipt.receiptCreationDate)
         XCTAssertEqual(receipt.ageRating, "4+")
@@ -82,8 +82,8 @@ class DTReceiptTests: XCTestCase
         XCTAssertEqual(receipt.bundleIdentifier, "com.cocoanetics.EmmiView")
         XCTAssertEqual(receipt.appVersion, "246")
         XCTAssertEqual(receipt.originalAppVersion, "1.0")
-        XCTAssertEqual(receipt.opaqueValue?.length, 16)
-        XCTAssertEqual(receipt.SHA1Hash?.length, 20)
+        XCTAssertEqual(receipt.opaqueValue?.count, 16)
+        XCTAssertEqual(receipt.SHA1Hash?.count, 20)
         XCTAssertNil(receipt.receiptExpirationDate)
         XCTAssertNotNil(receipt.receiptCreationDate)
         XCTAssertEqual(receipt.ageRating, "4+")
@@ -108,20 +108,20 @@ class DTReceiptTests: XCTestCase
     
     // MARK: - Helper
     
-    func dataForTestResource(name: String?, ofType ext: String?) -> NSData?
+    func dataForTestResource(_ name: String?, ofType ext: String?) -> Data?
     {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         
-        guard let path = bundle.pathForResource(name, ofType: ext) else { return nil }
+        guard let path = bundle.path(forResource: name, ofType: ext) else { return nil }
 
-        return NSData(contentsOfFile: path)
+        return (try? Data(contentsOf: URL(fileURLWithPath: path)))
     }
     
-    func receiptFromTestResource(name: String?, ofType ext: String?) -> Receipt?
+    func receiptFromTestResource(_ name: String?, ofType ext: String?) -> Receipt?
     {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: type(of: self))
         
-        guard let URL = bundle.URLForResource(name, withExtension: ext) else { return nil }
+        guard let URL = bundle.url(forResource: name, withExtension: ext) else { return nil }
         
         return Receipt(contentsOfURL: URL)
     }
