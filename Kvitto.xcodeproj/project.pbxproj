@@ -11,25 +11,25 @@
 		A70247BC1BC576470070DACA /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A70247BD1BC576470070DACA /* Kvitto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A70247C11BC5764F0070DACA /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		A70247D91BC577520070DACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70247C51BC5771E0070DACA /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		A70247DA1BC577560070DACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70247C61BC5771E0070DACA /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		A70247DB1BC5775E0070DACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70247C81BC5771F0070DACA /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		A70247DC1BC5789A0070DACA /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; settings = {ASSET_TAGS = (); }; };
-		A70247DD1BC578BC0070DACA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CF1BC5771F0070DACA /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A70247DE1BC578C40070DACA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CD1BC5771F0070DACA /* main.m */; settings = {ASSET_TAGS = (); }; };
-		A70247DF1BC578C70070DACA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CC1BC5771F0070DACA /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ASSET_TAGS = (); }; };
-		A79544951BC3FC7F00EC73B1 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* Receipt.swift */; settings = {ASSET_TAGS = (); }; };
-		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; settings = {ASSET_TAGS = (); }; };
-		A7BEDD541BC57E4A00A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; settings = {ASSET_TAGS = (); }; };
+		A70247D91BC577520070DACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70247C51BC5771E0070DACA /* Assets.xcassets */; };
+		A70247DA1BC577560070DACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70247C61BC5771E0070DACA /* LaunchScreen.storyboard */; };
+		A70247DB1BC5775E0070DACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70247C81BC5771F0070DACA /* Main.storyboard */; };
+		A70247DC1BC5789A0070DACA /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; };
+		A70247DD1BC578BC0070DACA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CF1BC5771F0070DACA /* ViewController.m */; };
+		A70247DE1BC578C40070DACA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CD1BC5771F0070DACA /* main.m */; };
+		A70247DF1BC578C70070DACA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CC1BC5771F0070DACA /* AppDelegate.m */; };
+		A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; };
+		A79544951BC3FC7F00EC73B1 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* Receipt.swift */; };
+		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; };
+		A7BEDD541BC57E4A00A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; };
 		A7BEDD5C1BC583D000A4BFAB /* DTFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A7BEDD611BC589DF00A4BFAB /* receipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E815E21BC531AB00127748 /* receipt */; settings = {ASSET_TAGS = (); }; };
-		A7BEDD7D1BC58AB000A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; settings = {ASSET_TAGS = (); }; };
-		A7BEDD7E1BC58DCC00A4BFAB /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; settings = {ASSET_TAGS = (); }; };
+		A7BEDD611BC589DF00A4BFAB /* receipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E815E21BC531AB00127748 /* receipt */; };
+		A7BEDD7D1BC58AB000A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; };
+		A7BEDD7E1BC58DCC00A4BFAB /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; };
 		A7D95AEC1BC40E0E00AB8A21 /* DTFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795442D1BC3FAC400EC73B1 /* DTFoundation.framework */; };
-		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; settings = {ASSET_TAGS = (); }; };
-		A7E8161C1BC5390C00127748 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; settings = {ASSET_TAGS = (); }; };
-		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; settings = {ASSET_TAGS = (); }; };
+		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; };
+		A7E8161C1BC5390C00127748 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; };
+		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -552,17 +552,21 @@
 		A79541B91BC3FA2000EC73B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Oliver Drobnik";
 				TargetAttributes = {
 					A70247881BC5763D0070DACA = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Z7L2YCUH45;
+						ProvisioningStyle = Automatic;
 					};
 					A795445B1BC3FC1600EC73B1 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					A79544641BC3FC1600EC73B1 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -904,8 +908,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -941,6 +947,7 @@
 		A70247011BC55D4B0070DACA /* Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -952,6 +959,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
 				PRODUCT_NAME = Kvitto;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -964,42 +972,55 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceiptTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Coverage;
 		};
 		A702479D1BC5763D0070DACA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Z7L2YCUH45;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cocoanetics.Kvitto-Demo";
 				PRODUCT_NAME = KvittoDemo;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		A702479E1BC5763D0070DACA /* Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Z7L2YCUH45;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cocoanetics.Kvitto-Demo";
 				PRODUCT_NAME = KvittoDemo;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Coverage;
 		};
 		A702479F1BC5763D0070DACA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Z7L2YCUH45;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cocoanetics.Kvitto-Demo";
 				PRODUCT_NAME = KvittoDemo;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1016,8 +1037,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1061,8 +1084,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1081,6 +1106,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1089,6 +1115,7 @@
 		A795446E1BC3FC1600EC73B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1100,6 +1127,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
 				PRODUCT_NAME = Kvitto;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1108,6 +1136,7 @@
 		A795446F1BC3FC1600EC73B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1119,6 +1148,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
 				PRODUCT_NAME = Kvitto;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1131,6 +1161,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceiptTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1141,6 +1172,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceiptTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

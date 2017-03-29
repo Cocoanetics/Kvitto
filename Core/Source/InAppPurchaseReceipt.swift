@@ -17,24 +17,24 @@ import DTFoundation
     /**
     The number of items purchased. This value corresponds to the quantity property of the SKPayment object stored in the transaction’s payment property.
     */
-    private(set) public var quantity: Int?
+    fileprivate(set) public var quantity: Int?
     
     /**
     The product identifier of the item that was purchased. This value corresponds to the productIdentifier property of the SKPayment object stored in the transaction’s payment property.
     */
-    private(set) public var productIdentifier: String?
+    fileprivate(set) public var productIdentifier: String?
     
     /**
     The transaction identifier of the item that was purchased. This value corresponds to the transaction’s transactionIdentifier property.
     */
-    private(set) public var transactionIdentifier: String?
+    fileprivate(set) public var transactionIdentifier: String?
     
     /**
     For a transaction that restores a previous transaction, the transaction identifier of the original transaction. Otherwise, identical to the transaction identifier. This value corresponds to the original transaction’s transactionIdentifier property.
     
     All receipts in a chain of renewals for an auto-renewable subscription have the same value for this field.
     */
-    private(set) public var originalTransactionIdentifier: String?
+    fileprivate(set) public var originalTransactionIdentifier: String?
     
     /**
     The date and time that the item was purchased. This value corresponds to the transaction’s transactionDate property.
@@ -43,40 +43,40 @@ import DTFoundation
     
     In an auto-renewable subscription receipt, this is always the date when the subscription was purchased or renewed, regardless of whether the transaction has been restored.
     */
-    private(set) public var purchaseDate: NSDate?
+    fileprivate(set) public var purchaseDate: Date?
     
     /**
     For a transaction that restores a previous transaction, the date of the original transaction. This value corresponds to the original transaction’s transactionDate property.
     
     In an auto-renewable subscription receipt, this indicates the beginning of the subscription period, even if the subscription has been renewed.
     */
-    private(set) public var originalPurchaseDate: NSDate?
+    fileprivate(set) public var originalPurchaseDate: Date?
     
     /**
     The expiration date for the subscription. This key is only present for auto-renewable subscription receipts.
     */
-    private(set) public var subscriptionExpirationDate: NSDate?
+    fileprivate(set) public var subscriptionExpirationDate: Date?
     
     /**
     For a transaction that was canceled by Apple customer support, the time and date of the cancellation. Treat a canceled receipt the same as if no purchase had ever been made.
     */
-    private(set) public var cancellationDate: NSDate?
+    fileprivate(set) public var cancellationDate: Date?
     
     /**
     The primary key for identifying subscription purchases.
     */
-    private(set) public var webOrderLineItemIdentifier: Int?
+    fileprivate(set) public var webOrderLineItemIdentifier: Int?
     
     /**
     The designated initializer
     */
-    public init?(data: NSData)
+    public init?(data: Data)
     {
         super.init()
         
         do
         {
-            try parseData(data)
+            _ = try parseData(data)
         }
         catch
         {
@@ -86,24 +86,24 @@ import DTFoundation
     
     // MARK: Parsing
     
-    private func parseData(data: NSData) throws -> Bool
+    fileprivate func parseData(_ data: Data) throws -> Bool
     {
-        guard let rootArray = DTASN1Serialization.objectWithData(data) as? [[AnyObject]]
+        guard let rootArray = DTASN1Serialization.object(with: data) as? [[AnyObject]]
             else
         {
-            throw ReceiptParsingError.InvalidRootObject
+            throw ReceiptParsingError.invalidRootObject
         }
         
         for var item in rootArray
         {
             guard item.count == 3,
-                let type = (item[0] as? NSNumber)?.integerValue,
-                version = (item[1] as? NSNumber)?.integerValue,
-                data = item[2] as? NSData
-                where version > 0
+                let type = (item[0] as? NSNumber)?.intValue,
+                let version = (item[1] as? NSNumber)?.intValue,
+                let data = item[2] as? Data
+                , version > 0
                 else
             {
-                throw ReceiptParsingError.InvalidRootObject
+                throw ReceiptParsingError.invalidRootObject
             }
             
             try processItem(type, data: data)
@@ -112,7 +112,7 @@ import DTFoundation
         return true
     }
     
-    private func processItem(type: Int, data: NSData) throws
+    fileprivate func processItem(_ type: Int, data: Data) throws
     {
         switch(type)
         {
