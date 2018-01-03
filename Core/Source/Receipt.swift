@@ -9,6 +9,8 @@
 import Foundation
 import DTFoundation
 
+@objcMembers
+
 /**
 An iTunes store sales receipt.
 */

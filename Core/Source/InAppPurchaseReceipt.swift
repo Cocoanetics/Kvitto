@@ -9,6 +9,8 @@
 import Foundation
 import DTFoundation
 
+@objcMembers
+
 /**
  A purchase receipt for an IAP
 */
