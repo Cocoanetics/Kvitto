@@ -9,6 +9,8 @@
 import Foundation
 import DTFoundation
 
+@objcMembers
+
 /**
  A simplified handler for a PKCS#7 Container. Only retrieves the unencrypted payloadData.
 */

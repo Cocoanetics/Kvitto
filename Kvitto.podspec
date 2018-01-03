@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'Kvitto'
-  spec.version      = '1.0.2'
+  spec.version      = '1.0.3'
   spec.summary      = "Parse and validate iTunes App Store receipts"
   spec.homepage     = "https://github.com/Cocoanetics/Kvitto"
   spec.author       = { "Oliver Drobnik" => "oliver@cocoanetics.com" }
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '8.0'
   spec.license      = 'BSD'
   spec.requires_arc = true
-  spec.dependency 'DTFoundation/DTASN1', '~> 1.7.9'
+  spec.dependency 'DTFoundation/DTASN1', '~> 1.7.13'
 
   spec.subspec 'Core' do |ss|
     ss.ios.deployment_target = '8.0'

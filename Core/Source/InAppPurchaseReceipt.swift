@@ -9,6 +9,8 @@
 import Foundation
 import DTFoundation
 
+@objcMembers
+
 /**
  A purchase receipt for an IAP
 */
@@ -18,6 +20,16 @@ import DTFoundation
     The number of items purchased. This value corresponds to the quantity property of the SKPayment object stored in the transaction’s payment property.
     */
     fileprivate(set) public var quantity: Int?
+    
+    /**
+     ObjectiveC support of quantity(NSInteger:- quantityNumber.integerValue)
+     The number of items purchased. This value corresponds to the quantity property of the SKPayment object stored in the transaction’s payment property.
+     */
+    public var quantityNumber : NSNumber? {
+        get {
+            return quantity as NSNumber?
+        }
+    }
     
     /**
     The product identifier of the item that was purchased. This value corresponds to the productIdentifier property of the SKPayment object stored in the transaction’s payment property.
@@ -66,6 +78,16 @@ import DTFoundation
     The primary key for identifying subscription purchases.
     */
     fileprivate(set) public var webOrderLineItemIdentifier: Int?
+    
+    /**
+     ObjectiveC support of webOrderLineItemIdentifier(NSInteger:- webOrderLineItemIdentifierNumber.integerValue)
+     The primary key for identifying subscription purchases.
+     */
+    public var webOrderLineItemIdentifierNumber : NSNumber? {
+        get {
+            return webOrderLineItemIdentifier as NSNumber?
+        }
+    }
     
     /**
     The designated initializer
