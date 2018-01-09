@@ -78,7 +78,7 @@ An iTunes store sales receipt.
     fileprivate(set) public var unknownPurposeDate: Date?
     
     /**
-    Array of InAppPurchaseReceipt objects decribing IAPs.
+    Array of InAppPurchaseReceipt objects describing IAPs.
     
     The in-app purchase receipt for a consumable product is added to the receipt when the purchase is made. It is kept in the receipt until your app finishes that transaction. After that point, it is removed from the receipt the next time the receipt is updated—for example, when the user makes another purchase or if your app explicitly refreshes the receipt.
     
@@ -148,7 +148,7 @@ An iTunes store sales receipt.
         return true
     }
     
-    func processItem(_ type: Int, data: Data) throws
+    fileprivate func processItem(_ type: Int, data: Data) throws
     {
         switch(type)
         {
