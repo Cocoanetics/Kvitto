@@ -19,6 +19,7 @@ enum ReceiptParsingError: Error
     case cannotDecodeExpectedInt
     case cannotDecodeExpectedString
     case cannotDecodeDate
+    case unexpectedValue
 }
 
 /**
@@ -43,6 +44,22 @@ internal func _stringFromData(_ data: Data) throws -> String
         throw ReceiptParsingError.cannotDecodeExpectedString
     }
     
+    return string
+}
+
+internal func _optionalStringFromData(_ data: Data) throws -> String?
+{
+    guard let object = DTASN1Serialization.object(with: data)
+    else
+    {
+        return nil
+    }
+    guard let string = object as? String
+    else
+    {
+        throw ReceiptParsingError.unexpectedValue
+    }
+
     return string
 }
 

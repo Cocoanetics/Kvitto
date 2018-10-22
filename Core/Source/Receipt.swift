@@ -192,7 +192,7 @@ An iTunes store sales receipt.
                 unknownPurposeDate = try _dateFromData(data)
         
             case 19:
-                originalAppVersion = try _stringFromData(data)
+                originalAppVersion = try _optionalStringFromData(data)
             
             case 21:
                 receiptExpirationDate = try _dateFromData(data)
