@@ -116,7 +116,7 @@ import DTFoundation
             throw ReceiptParsingError.invalidRootObject
         }
         
-        for var item in rootArray
+        for item in rootArray
         {
             guard item.count == 3,
                 let type = (item[0] as? NSNumber)?.intValue,
