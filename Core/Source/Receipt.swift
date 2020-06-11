@@ -130,7 +130,7 @@ An iTunes store sales receipt.
             throw ReceiptParsingError.invalidRootObject
         }
         
-        for var element in rootArray
+        for element in rootArray
         {
             guard element.count == 3,
                 let type = (element[0] as? NSNumber)?.intValue,
