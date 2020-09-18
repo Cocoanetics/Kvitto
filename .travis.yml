@@ -1,9 +1,9 @@
 ---
 language: objective-c
-osx_image: xcode8
+osx_image: xcode9
 
 script: 
  - xcodebuild -project Kvitto.xcodeproj -scheme "Kvitto" -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 6 Plus' build test
 
 after_success:
- - bash <(curl -s https://raw.githubusercontent.com/codecov/codecov-bash/xcode/codecov)
+ - bash <(curl -s https://codecov.io/bash)

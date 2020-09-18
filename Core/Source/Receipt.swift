@@ -130,7 +130,7 @@ An iTunes store sales receipt.
             throw ReceiptParsingError.invalidRootObject
         }
         
-        for var element in rootArray
+        for element in rootArray
         {
             guard element.count == 3,
                 let type = (element[0] as? NSNumber)?.intValue,
@@ -192,7 +192,7 @@ An iTunes store sales receipt.
                 unknownPurposeDate = try _dateFromData(data)
         
             case 19:
-                originalAppVersion = try _stringFromData(data)
+                originalAppVersion = try _optionalStringFromData(data)
             
             case 21:
                 receiptExpirationDate = try _dateFromData(data)
