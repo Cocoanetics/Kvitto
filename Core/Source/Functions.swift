@@ -86,7 +86,22 @@ internal func _dateFromRFC3339String(_ string: String) -> Date?
 {
     let rfc3339DateFormatter = DateFormatter()
     rfc3339DateFormatter.locale = Locale(identifier: "en_US_POSIX")
-    rfc3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     rfc3339DateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+	
+	if string.count == 24  // e.g. 2020-09-27T12:07:19.686Z
+	{
+		/// with fractional seconds
+		rfc3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+	}
+	else if string.count == 20  // e.g. 2020-09-27T12:07:19Z
+	{
+		/// no fractional seconds
+		rfc3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+	}
+	else
+	{
+		return nil
+	}
+
     return rfc3339DateFormatter.date(from: string)
 }
