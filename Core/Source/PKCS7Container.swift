@@ -43,9 +43,9 @@ import DTFoundation
     func unwrapRootSequence(_ sequence: [AnyObject]) -> Data?
     {
         guard sequence.count==2,
-              let OID = sequence[0] as? String , OID == "1.2.840.113549.1.7.2",
-              let containedSequence = sequence[1] as? [AnyObject] , containedSequence.count == 1,
-              let actualSequence = containedSequence[0] as? [AnyObject] , actualSequence.count == 5,
+              let OID = sequence[0] as? String, OID == "1.2.840.113549.1.7.2",
+              let containedSequence = sequence[1] as? [AnyObject], containedSequence.count == 1,
+              let actualSequence = containedSequence[0] as? [AnyObject], actualSequence.count > 2,
               let dataSequence = actualSequence[2] as? [AnyObject]
         else
         {
@@ -58,8 +58,8 @@ import DTFoundation
     func unwrapSignedDataSequence(_ sequence: [AnyObject]) -> Data?
     {
         guard sequence.count==2,
-            let OID = sequence[0] as? String , OID == "1.2.840.113549.1.7.1",
-            let dataSequence = sequence[1] as? [Data] , dataSequence.count == 1
+            let OID = sequence[0] as? String, OID == "1.2.840.113549.1.7.1",
+            let dataSequence = sequence[1] as? [Data], dataSequence.count == 1
             else
         {
             return nil
