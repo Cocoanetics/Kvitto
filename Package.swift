@@ -24,10 +24,12 @@ let package = Package(
             dependencies: [
                 .product(name: "DTFoundation", package: "DTFoundation"),
             ],
-			path: "Core"),
+            path: "Core/Source"),
         .testTarget(
             name: "KvittoTests",
             dependencies: ["Kvitto"],
-			path: "Test"),
+            path: "Test/Source",
+            resources: [.copy("receipt"),
+                        .copy("sandboxReceipt")]),
     ]
 )
