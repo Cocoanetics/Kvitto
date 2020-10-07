@@ -77,6 +77,7 @@
 		A79544771BC3FC5D00EC73B1 /* sandboxReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = sandboxReceipt; sourceTree = "<group>"; };
 		A79544941BC3FC7F00EC73B1 /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		A7BEDD531BC57E4A00A4BFAB /* newReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newReceipt; sourceTree = "<group>"; };
+		A7CC84B9252E10C60056BC22 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = SOURCE_ROOT; };
 		A7D95B091BC437F700AB8A21 /* Kvitto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kvitto.h; sourceTree = "<group>"; };
 		A7D95B0A1BC437F700AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B0B1BC4387A00AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		A79541B81BC3FA2000EC73B1 = {
 			isa = PBXGroup;
 			children = (
+				A7CC84B9252E10C60056BC22 /*  */,
 				A79544791BC3FC5D00EC73B1 /* Core */,
 				A70247C21BC5771E0070DACA /* Demo */,
 				A79544731BC3FC5D00EC73B1 /* Test */,
