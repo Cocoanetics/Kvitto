@@ -6,3 +6,6 @@ build
 project.xcworkspace
 xcuserdata
 .svn
+.swiftpm
+.dependencies
+.derivedData
