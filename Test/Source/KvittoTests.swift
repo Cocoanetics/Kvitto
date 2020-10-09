@@ -108,21 +108,56 @@ class DTReceiptTests: XCTestCase
     
     // MARK: - Helper
     
-    func dataForTestResource(_ name: String?, ofType ext: String?) -> Data?
+	func urlForTestResource(name: String, ofType ext: String?) -> URL?
+	{
+		let bundle = Bundle(for: type(of: self))
+		
+		#if SWIFT_PACKAGE
+		
+		// there is a bug where Bundle.module points to the path of xcrun inside the Xcode.app bundle, instead of the test bundle
+		// that aborts unit tests with message:
+		//   Fatal error: could not load resource bundle: /Applications/Xcode.app/Contents/Developer/usr/bin/Kvitto_KvittoTests.bundle: file KvittoTests/resource_bundle_accessor.swift, line 7
+		
+		// workaround: try to find the resource bundle at the build path
+		let buildPathURL = bundle.bundleURL.deletingLastPathComponent()
+		
+		guard let resourceBundle = Bundle(url: buildPathURL.appendingPathComponent("Kvitto_KvittoTests.bundle")),
+		   let path = resourceBundle.path(forResource: name, ofType: ext) else
+		{
+			return nil
+		}
+		
+		return URL(fileURLWithPath: path)
+		
+		#else
+		
+		guard let path = bundle.path(forResource: name, ofType: ext) else
+		{
+			return nil
+		}
+		
+		return URL(fileURLWithPath: path)
+		
+		#endif
+	}
+	
+    func dataForTestResource(_ name: String, ofType ext: String?) -> Data?
     {
-        let bundle = Bundle(for: type(of: self))
-        
-        guard let path = bundle.path(forResource: name, ofType: ext) else { return nil }
+		guard let url = urlForTestResource(name: name, ofType: ext) else
+		{
+			return nil
+		}
 
-        return (try? Data(contentsOf: URL(fileURLWithPath: path)))
+		return (try? Data(contentsOf: url))
     }
     
-    func receiptFromTestResource(_ name: String?, ofType ext: String?) -> Receipt?
+    func receiptFromTestResource(_ name: String, ofType ext: String?) -> Receipt?
     {
-        let bundle = Bundle(for: type(of: self))
-        
-        guard let URL = bundle.url(forResource: name, withExtension: ext) else { return nil }
-        
-        return Receipt(contentsOfURL: URL)
+		guard let url = urlForTestResource(name: name, ofType: ext) else
+		{
+			return nil
+		}
+
+        return Receipt(contentsOfURL: url)
     }
 }

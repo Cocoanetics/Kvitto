@@ -124,7 +124,7 @@ An iTunes store sales receipt.
     
     fileprivate func parseData(_ data: Data) throws -> Bool
     {
-        guard let rootArray = DTASN1Serialization.object(with: data) as? [[AnyObject]]
+        guard let rootArray = DTASN1Serialization.object(with: data) as? [[Any]]
             else
         {
             throw ReceiptParsingError.invalidRootObject
