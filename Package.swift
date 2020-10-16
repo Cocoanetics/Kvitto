@@ -16,7 +16,8 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Cocoanetics/DTFoundation.git", 
-		from: "1.7.15"),
+		.branch("develop"))
+//		from: "1.7.15"),
     ],
     targets: [
         .target(
@@ -32,7 +33,6 @@ let package = Package(
             dependencies: ["Kvitto"],
             path: "Test",
             exclude: ["Info.plist"],
-            resources: [.copy("Resources/receipt"),
-                        .copy("Resources/sandboxReceipt")]),
+            resources: [.copy("Resources")]),
     ]
 )
