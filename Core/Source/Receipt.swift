@@ -150,6 +150,8 @@ An iTunes store sales receipt.
     
     fileprivate func processItem(_ type: Int, data: Data) throws
     {
+		do {
+			
         switch(type)
         {
             case 0:
@@ -201,5 +203,10 @@ An iTunes store sales receipt.
                 // all other types are private
                 break;
         }
+		}
+		catch let error
+		{
+			print(error.localizedDescription)
+		}
     }
 }

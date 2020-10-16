@@ -105,6 +105,42 @@ class DTReceiptTests: XCTestCase
         XCTAssertNil(iap.cancellationDate)
         // XCTAssertEqual(iap.webOrderLineItemIdentifier, 1000000029801037)
     }
+	
+	func testDecodeStoreKitTestReceipt()
+	{
+		guard let receipt = receiptFromTestResource("storeKitTestReceipt", ofType: nil)
+		else
+		{
+			XCTFail("Error parsing receipt")
+			return
+		}
+		
+		XCTAssertEqual(receipt.bundleIdentifier, "com.rd.eehelper")
+		XCTAssertEqual(receipt.appVersion, "2020.10.02.1149")
+		XCTAssertEqual(receipt.originalAppVersion, nil)
+		XCTAssertEqual(receipt.opaqueValue?.count, 8)
+		XCTAssertEqual(receipt.SHA1Hash?.count, 20)
+		XCTAssertEqual(receipt.receiptExpirationDate, Date.distantFuture)
+		XCTAssertNotNil(receipt.receiptCreationDate)
+		XCTAssertNil(receipt.ageRating)
+		XCTAssertEqual(receipt.receiptType, "Xcode")
+		
+		guard let iap = receipt.inAppPurchaseReceipts?.first
+			else
+		{
+			XCTFail("No IAP decoded")
+			return
+		}
+		
+		XCTAssertEqual(iap.productIdentifier, "com.rd.eehelper.pro_subscription")
+		XCTAssertEqual(iap.transactionIdentifier, "0")
+		XCTAssertNil(iap.originalTransactionIdentifier)
+		XCTAssertNotNil(iap.subscriptionExpirationDate)
+		XCTAssertNil(iap.webOrderLineItemIdentifier)
+		XCTAssertNotNil(iap.purchaseDate)
+		XCTAssertNil(iap.cancellationDate)
+		// XCTAssertEqual(iap.webOrderLineItemIdentifier, 1000000029801037)
+	}
     
     // MARK: - Helper
     
