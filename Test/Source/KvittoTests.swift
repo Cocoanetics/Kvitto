@@ -9,7 +9,7 @@
 import XCTest
 import DTFoundation
 
-@testable import Kvitto
+import Kvitto
 
 class DTReceiptTests: XCTestCase
 {
