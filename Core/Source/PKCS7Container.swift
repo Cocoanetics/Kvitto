@@ -58,13 +58,26 @@ import DTFoundation
     func unwrapSignedDataSequence(_ sequence: [AnyObject]) -> Data?
     {
         guard sequence.count==2,
-            let OID = sequence[0] as? String, OID == "1.2.840.113549.1.7.1",
-            let dataSequence = sequence[1] as? [Data], dataSequence.count == 1
+            let OID = sequence[0] as? String,
+			OID == "1.2.840.113549.1.7.1"
             else
         {
             return nil
         }
-        
-        return dataSequence[0]
+
+		if let dataSequence = sequence[1] as? [Data],
+			dataSequence.count == 1
+		{
+			return dataSequence[0]
+		}
+		
+		if let array = sequence[1] as? [[Data]],
+		   let dataSequence = array.first,
+		   dataSequence.count == 1
+		{
+			return dataSequence[0]
+		}
+		
+		return nil
     }
 }
