@@ -9,15 +9,13 @@
 import Foundation
 import DTFoundation
 
-@objcMembers
-
 /**
 An iTunes store sales receipt.
 */
-@objc(DTReceipt) public final class Receipt: NSObject
+@objc(DTReceipt) @objcMembers public final class Receipt: NSObject
 {
     /**
-     The app’s bundle identifier. This corresponds to the value of CFBundleIdentifier in the Info.plist file.
+     The app’s bundle identifier. This corresponds to the value of `CFBundleIdentifier` in the `Info.plist` file.
     */
     fileprivate(set) public var bundleIdentifier: String?
     
@@ -27,7 +25,7 @@ An iTunes store sales receipt.
     fileprivate(set) public var bundleIdentifierData: Data?
     
     /**
-    The app’s version number. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist.
+    The app’s version number. This corresponds to the value of `CFBundleVersion` (in iOS) or `CFBundleShortVersionString` (in OS X) in the Info.plist.
     */
     fileprivate(set) public var appVersion: String?
     
@@ -42,11 +40,11 @@ An iTunes store sales receipt.
     fileprivate(set) public var SHA1Hash: Data?
 
     /**
-    The version of the app that was originally purchased. This corresponds to the value of CFBundleVersion (in iOS) or CFBundleShortVersionString (in OS X) in the Info.plist file when the purchase was originally made.
+    The version of the app that was originally purchased. This corresponds to the value of `CFBundleVersion` (in iOS) or `CFBundleShortVersionString` (in OS X) in the Info.plist file when the purchase was originally made.
     
     In the sandbox environment, the value of this field is always “1.0”.
     
-    Receipts prior to June 20, 2013 omit this field. It is populated on all new receipts, regardless of OS version. If you need the field but it is missing, manually refresh the receipt using the SKReceiptRefreshRequest class
+    Receipts prior to June 20, 2013 omit this field. It is populated on all new receipts, regardless of OS version. If you need the field but it is missing, manually refresh the receipt using the `SKReceiptRefreshRequest` class
     */
     fileprivate(set) public var originalAppVersion: String?
     
@@ -78,11 +76,11 @@ An iTunes store sales receipt.
     fileprivate(set) public var unknownPurposeDate: Date?
     
     /**
-    Array of InAppPurchaseReceipt objects describing IAPs.
+    Array of `InAppPurchaseReceipt` objects describing IAPs.
     
-    The in-app purchase receipt for a consumable product is added to the receipt when the purchase is made. It is kept in the receipt until your app finishes that transaction. After that point, it is removed from the receipt the next time the receipt is updated—for example, when the user makes another purchase or if your app explicitly refreshes the receipt.
+    The In-App-Purchase receipt for a consumable product is added to the receipt when the purchase is made. It is kept in the receipt until your app finishes that transaction. After that point, it is removed from the receipt the next time the receipt is updated—for example, when the user makes another purchase or if your app explicitly refreshes the receipt.
     
-    The in-app purchase receipt for a non-consumable product, auto-renewable subscription, non-renewing subscription, or free subscription remains in the receipt indefinitely.
+    The In-App-Purchase receipt for a non-consumable product, auto-renewable subscription, non-renewing subscription, or free subscription remains in the receipt indefinitely.
     */
     fileprivate(set) public var inAppPurchaseReceipts: [InAppPurchaseReceipt]?
     

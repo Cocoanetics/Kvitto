@@ -9,12 +9,10 @@
 import Foundation
 import DTFoundation
 
-@objcMembers
-
 /**
  A simplified handler for a PKCS#7 Container. Only retrieves the unencrypted payloadData.
 */
-@objc(DTPKCS7Container) open class PKCS7Container: NSObject, DTASN1ParserDelegate
+@objc(DTPKCS7Container) @objcMembers open class PKCS7Container: NSObject, DTASN1ParserDelegate
 {
     /**
      The data of the payload
