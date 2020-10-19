@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A795445B1BC3FC1600EC73B1"
-               BuildableName = "Kvitto.framework"
+               BuildableName = "Kvitto_iOS.framework"
                BlueprintName = "Kvitto (iOS)"
                ReferencedContainer = "container:Kvitto.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A795445B1BC3FC1600EC73B1"
-            BuildableName = "Kvitto.framework"
+            BuildableName = "Kvitto_iOS.framework"
             BlueprintName = "Kvitto (iOS)"
             ReferencedContainer = "container:Kvitto.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A795445B1BC3FC1600EC73B1"
-            BuildableName = "Kvitto.framework"
+            BuildableName = "Kvitto_iOS.framework"
             BlueprintName = "Kvitto (iOS)"
             ReferencedContainer = "container:Kvitto.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A795445B1BC3FC1600EC73B1"
-            BuildableName = "Kvitto.framework"
+            BuildableName = "Kvitto_iOS.framework"
             BlueprintName = "Kvitto (iOS)"
             ReferencedContainer = "container:Kvitto.xcodeproj">
          </BuildableReference>
