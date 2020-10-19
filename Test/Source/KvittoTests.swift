@@ -9,7 +9,7 @@
 import XCTest
 import DTFoundation
 
-@testable import Kvitto
+import Kvitto
 
 class DTReceiptTests: XCTestCase
 {
@@ -105,24 +105,95 @@ class DTReceiptTests: XCTestCase
         XCTAssertNil(iap.cancellationDate)
         // XCTAssertEqual(iap.webOrderLineItemIdentifier, 1000000029801037)
     }
+	
+	func testDecodeStoreKitTestReceipt()
+	{
+		guard let receipt = receiptFromTestResource("storeKitTestReceipt", ofType: nil)
+		else
+		{
+			XCTFail("Error parsing receipt")
+			return
+		}
+		
+		XCTAssertEqual(receipt.bundleIdentifier, "com.rd.eehelper")
+		XCTAssertEqual(receipt.appVersion, "2020.10.02.1149")
+		XCTAssertEqual(receipt.originalAppVersion, nil)
+		XCTAssertEqual(receipt.opaqueValue?.count, 8)
+		XCTAssertEqual(receipt.SHA1Hash?.count, 20)
+		XCTAssertEqual(receipt.receiptExpirationDate, Date.distantFuture)
+		XCTAssertNotNil(receipt.receiptCreationDate)
+		XCTAssertNil(receipt.ageRating)
+		XCTAssertEqual(receipt.receiptType, "Xcode")
+		
+		guard let iap = receipt.inAppPurchaseReceipts?.first
+			else
+		{
+			XCTFail("No IAP decoded")
+			return
+		}
+		
+		XCTAssertEqual(iap.productIdentifier, "com.rd.eehelper.pro_subscription")
+		XCTAssertEqual(iap.transactionIdentifier, "0")
+		XCTAssertNil(iap.originalTransactionIdentifier)
+		XCTAssertNotNil(iap.subscriptionExpirationDate)
+		XCTAssertNil(iap.webOrderLineItemIdentifier)
+		XCTAssertNotNil(iap.purchaseDate)
+		XCTAssertNil(iap.cancellationDate)
+		// XCTAssertEqual(iap.webOrderLineItemIdentifier, 1000000029801037)
+	}
     
     // MARK: - Helper
     
-    func dataForTestResource(_ name: String?, ofType ext: String?) -> Data?
+	func urlForTestResource(name: String, ofType ext: String?) -> URL?
+	{
+		let bundle = Bundle(for: type(of: self))
+		
+		#if SWIFT_PACKAGE
+		
+		// there is a bug where Bundle.module points to the path of xcrun inside the Xcode.app bundle, instead of the test bundle
+		// that aborts unit tests with message:
+		//   Fatal error: could not load resource bundle: /Applications/Xcode.app/Contents/Developer/usr/bin/Kvitto_KvittoTests.bundle: file KvittoTests/resource_bundle_accessor.swift, line 7
+		
+		// workaround: try to find the resource bundle at the build path
+		let buildPathURL = bundle.bundleURL.deletingLastPathComponent()
+		
+		guard let resourceBundle = Bundle(url: buildPathURL.appendingPathComponent("Kvitto_KvittoTests.bundle")),
+		   let path = resourceBundle.path(forResource: name, ofType: ext) else
+		{
+			return nil
+		}
+		
+		return URL(fileURLWithPath: path)
+		
+		#else
+		
+		guard let path = bundle.path(forResource: name, ofType: ext) else
+		{
+			return nil
+		}
+		
+		return URL(fileURLWithPath: path)
+		
+		#endif
+	}
+	
+    func dataForTestResource(_ name: String, ofType ext: String?) -> Data?
     {
-        let bundle = Bundle(for: type(of: self))
-        
-        guard let path = bundle.path(forResource: name, ofType: ext) else { return nil }
+		guard let url = urlForTestResource(name: name, ofType: ext) else
+		{
+			return nil
+		}
 
-        return (try? Data(contentsOf: URL(fileURLWithPath: path)))
+		return (try? Data(contentsOf: url))
     }
     
-    func receiptFromTestResource(_ name: String?, ofType ext: String?) -> Receipt?
+    func receiptFromTestResource(_ name: String, ofType ext: String?) -> Receipt?
     {
-        let bundle = Bundle(for: type(of: self))
-        
-        guard let URL = bundle.url(forResource: name, withExtension: ext) else { return nil }
-        
-        return Receipt(contentsOfURL: URL)
+		guard let url = urlForTestResource(name: name, ofType: ext) else
+		{
+			return nil
+		}
+
+        return Receipt(contentsOfURL: url)
     }
 }

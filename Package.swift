@@ -1,5 +1,4 @@
 // swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -16,20 +15,23 @@ let package = Package(
             targets: ["Kvitto"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Cocoanetics/DTFoundation.git", from: "1.7.15"),
+        .package(url: "https://github.com/Cocoanetics/DTFoundation.git", 
+		from: "1.7.16"),
     ],
     targets: [
         .target(
             name: "Kvitto",
             dependencies: [
-                .product(name: "DTFoundation", package: "DTFoundation"),
+                .product(name: "DTFoundation", 
+				package: "DTFoundation"),
             ],
-            path: "Core/Source"),
+            path: "Core",
+            exclude: ["Info.plist"]),
         .testTarget(
             name: "KvittoTests",
             dependencies: ["Kvitto"],
-            path: "Test/Source",
-            resources: [.copy("receipt"),
-                        .copy("sandboxReceipt")]),
+            path: "Test",
+            exclude: ["Info.plist"],
+            resources: [.copy("Resources")]),
     ]
 )

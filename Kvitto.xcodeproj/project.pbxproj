@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A70247611BC56A000070DACA /* Kvitto.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D95B091BC437F700AB8A21 /* Kvitto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A70247BC1BC576470070DACA /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		A70247BD1BC576470070DACA /* Kvitto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A70247D91BC577520070DACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70247C51BC5771E0070DACA /* Assets.xcassets */; };
 		A70247DA1BC577560070DACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70247C61BC5771E0070DACA /* LaunchScreen.storyboard */; };
 		A70247DB1BC5775E0070DACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70247C81BC5771F0070DACA /* Main.storyboard */; };
@@ -17,33 +15,212 @@
 		A70247DD1BC578BC0070DACA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CF1BC5771F0070DACA /* ViewController.m */; };
 		A70247DE1BC578C40070DACA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CD1BC5771F0070DACA /* main.m */; };
 		A70247DF1BC578C70070DACA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70247CC1BC5771F0070DACA /* AppDelegate.m */; };
-		A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */; };
 		A79544951BC3FC7F00EC73B1 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79544941BC3FC7F00EC73B1 /* Receipt.swift */; };
 		A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A79544771BC3FC5D00EC73B1 /* sandboxReceipt */; };
 		A7BEDD541BC57E4A00A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; };
 		A7BEDD611BC589DF00A4BFAB /* receipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E815E21BC531AB00127748 /* receipt */; };
 		A7BEDD7D1BC58AB000A4BFAB /* newReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7BEDD531BC57E4A00A4BFAB /* newReceipt */; };
 		A7BEDD7E1BC58DCC00A4BFAB /* KvittoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B101BC438D200AB8A21 /* KvittoTests.swift */; };
-		A7C567112514DEE200463F1B /* DTFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A7C567102514DEE200463F1B /* DTFoundation */; };
+		A7C39DF4253A492900D9DCB3 /* Kvitto in Frameworks */ = {isa = PBXBuildFile; productRef = A7C39DF3253A492900D9DCB3 /* Kvitto */; };
+		A7C39DFD253A498600D9DCB3 /*  in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7CC84B9252E10C60056BC22 /*  */; };
+		A7C39E03253A49B500D9DCB3 /* Kvitto in Frameworks */ = {isa = PBXBuildFile; productRef = A7C39E02253A49B500D9DCB3 /* Kvitto */; };
+		A7C39EB8253C81D000D9DCB3 /* DTFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A7C39EB7253C81D000D9DCB3 /* DTFoundation */; };
 		A7D95B151BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */; };
+		A7E7B6902539DF7C005B1EDA /* storeKitTestReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E7B68F2539DF7C005B1EDA /* storeKitTestReceipt */; };
+		A7E7B7132539E17C005B1EDA /* storeKitTestReceipt in Resources */ = {isa = PBXBuildFile; fileRef = A7E7B6932539DFFF005B1EDA /* storeKitTestReceipt */; };
 		A7E8161C1BC5390C00127748 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8161B1BC5390C00127748 /* Functions.swift */; };
 		A7FEE9C01BC408E2002F8464 /* PKCS7Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A70247BE1BC576470070DACA /* PBXContainerItemProxy */ = {
+		A7C39E57253C810400D9DCB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A79541B91BC3FA2000EC73B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A795445B1BC3FC1600EC73B1;
-			remoteInfo = "Kvitto (iOS)";
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70B4CE71486637E00873A4A;
+			remoteInfo = "Static Library";
 		};
-		A79544671BC3FC1600EC73B1 /* PBXContainerItemProxy */ = {
+		A7C39E59253C810400D9DCB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A79541B91BC3FA2000EC73B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A795445B1BC3FC1600EC73B1;
-			remoteInfo = DTSalesReceipt;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 384470EB1BA3330F0037C68D;
+			remoteInfo = "Static Library (tvOS)";
+		};
+		A7C39E5B253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A710A5001607556000437D36;
+			remoteInfo = "Static Library (Mac)";
+		};
+		A7C39E5D253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7AC21AF196417830009E1B9;
+			remoteInfo = "DTAnimatedGIF (iOS)";
+		};
+		A7C39E5F253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A79D999C1792D1F50082BC06;
+			remoteInfo = "DTAWS (iOS)";
+		};
+		A7C39E61253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA9CB80C17ABDEF200A596C5;
+			remoteInfo = "DTASN1 (iOS)";
+		};
+		A7C39E63253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E383C2160DFEDB00CF72D6;
+			remoteInfo = "DTHTMLParser (iOS)";
+		};
+		A7C39E65253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7CE547166613B60028D339;
+			remoteInfo = "DTHTMLParser (Mac)";
+		};
+		A7C39E67253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F88FF6801920A83300120808;
+			remoteInfo = "DTProgressHUD (iOS)";
+		};
+		A7C39E69253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A72121DA173BFFB1003C6F0A;
+			remoteInfo = "DTReachability (iOS)";
+		};
+		A7C39E6B253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A72121EA173BFFED003C6F0A;
+			remoteInfo = "DTReachability (Mac)";
+		};
+		A7C39E6D253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7C92B7A174FB8900019D70A;
+			remoteInfo = "DTSQLite (iOS)";
+		};
+		A7C39E6F253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7C92B8C174FB9720019D70A;
+			remoteInfo = "DTSQLite (Mac)";
+		};
+		A7C39E71253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A78220BA168060CA005B602D;
+			remoteInfo = "DTUTI (iOS)";
+		};
+		A7C39E73253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E889A416A9B190009EF0DF;
+			remoteInfo = "DTUTI (Mac)";
+		};
+		A7C39E75253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7E383DA160DFF8600CF72D6;
+			remoteInfo = "DTZipArchive (iOS)";
+		};
+		A7C39E77253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7D8C7C21723174600025675;
+			remoteInfo = "DTZipArchive (Mac)";
+		};
+		A7C39E79253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A78381C31963F8D700AF09D3;
+			remoteInfo = "DTAnimatedGIF Demo";
+		};
+		A7C39E7B253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F88FF6A51920AAB600120808;
+			remoteInfo = "DTProgressHUD Demo";
+		};
+		A7C39E7D253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7D9D62D1758C89800C29B6F;
+			remoteInfo = "DTReachability Demo";
+		};
+		A7C39E7F253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70D74D01743AFBC00E6E626;
+			remoteInfo = "DTSidePanels Demo";
+		};
+		A7C39E81253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAF37A2017AFDD93009AC27C;
+			remoteInfo = "DTZipArchive Demo";
+		};
+		A7C39E83253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAC284E619B84B5F0010C385;
+			remoteInfo = "DTActionSheet Demo";
+		};
+		A7C39E85253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7917C77191A312600964D63;
+			remoteInfo = "Unit Tests";
+		};
+		A7C39E87253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7EA07B81A2B2F6A00B61CCE;
+			remoteInfo = "DTFoundation (iOS)";
+		};
+		A7C39E89253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7EA07391A2B215200B61CCE;
+			remoteInfo = "DTFoundation (OSX)";
+		};
+		A7C39E8B253C810400D9DCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 384471551BA33ED80037C68D;
+			remoteInfo = "DTFoundation (tvOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,7 +231,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A70247BD1BC576470070DACA /* Kvitto.framework in Embed Frameworks */,
+				A7C39DFD253A498600D9DCB3 /*  in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,17 +249,20 @@
 		A70247CD1BC5771F0070DACA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A70247CE1BC5771F0070DACA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A70247CF1BC5771F0070DACA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A795445C1BC3FC1600EC73B1 /* Kvitto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kvitto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A795445C1BC3FC1600EC73B1 /* Kvitto_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kvitto_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79544771BC3FC5D00EC73B1 /* sandboxReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = sandboxReceipt; sourceTree = "<group>"; };
 		A79544941BC3FC7F00EC73B1 /* Receipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		A7BEDD531BC57E4A00A4BFAB /* newReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newReceipt; sourceTree = "<group>"; };
+		A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTFoundation.xcodeproj; path = DTFoundation/DTFoundation.xcodeproj; sourceTree = "<group>"; };
 		A7CC84B9252E10C60056BC22 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = SOURCE_ROOT; };
 		A7D95B091BC437F700AB8A21 /* Kvitto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kvitto.h; sourceTree = "<group>"; };
 		A7D95B0A1BC437F700AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B0B1BC4387A00AB8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D95B101BC438D200AB8A21 /* KvittoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KvittoTests.swift; sourceTree = "<group>"; };
 		A7D95B141BC4FA9000AB8A21 /* InAppPurchaseReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseReceipt.swift; sourceTree = "<group>"; };
+		A7E7B68F2539DF7C005B1EDA /* storeKitTestReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; name = storeKitTestReceipt; path = ../../../../Desktop/storeKitTestReceipt; sourceTree = "<group>"; };
+		A7E7B6932539DFFF005B1EDA /* storeKitTestReceipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = storeKitTestReceipt; sourceTree = "<group>"; };
 		A7E815E21BC531AB00127748 /* receipt */ = {isa = PBXFileReference; lastKnownFileType = file; path = receipt; sourceTree = "<group>"; };
 		A7E8161B1BC5390C00127748 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A7FEE9BF1BC408E2002F8464 /* PKCS7Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS7Container.swift; sourceTree = "<group>"; };
@@ -93,7 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70247BC1BC576470070DACA /* Kvitto.framework in Frameworks */,
+				A7C39DF4253A492900D9DCB3 /* Kvitto in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C567112514DEE200463F1B /* DTFoundation in Frameworks */,
+				A7C39EB8253C81D000D9DCB3 /* DTFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79544661BC3FC1600EC73B1 /* Kvitto.framework in Frameworks */,
+				A7C39E03253A49B500D9DCB3 /* Kvitto in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +309,7 @@
 		A70247C41BC5771E0070DACA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A7E7B68F2539DF7C005B1EDA /* storeKitTestReceipt */,
 				A7BEDD531BC57E4A00A4BFAB /* newReceipt */,
 				A70247C51BC5771E0070DACA /* Assets.xcassets */,
 				A70247C61BC5771E0070DACA /* LaunchScreen.storyboard */,
@@ -158,13 +339,14 @@
 				A79544731BC3FC5D00EC73B1 /* Test */,
 				A79541D61BC3FAC300EC73B1 /* Externals */,
 				A79541C21BC3FA2000EC73B1 /* Products */,
+				A7E7B70F2539E13F005B1EDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		A79541C21BC3FA2000EC73B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A795445C1BC3FC1600EC73B1 /* Kvitto.framework */,
+				A795445C1BC3FC1600EC73B1 /* Kvitto_iOS.framework */,
 				A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */,
 				A70247891BC5763D0070DACA /* KvittoDemo.app */,
 			);
@@ -174,6 +356,7 @@
 		A79541D61BC3FAC300EC73B1 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */,
 			);
 			path = Externals;
 			sourceTree = "<group>";
@@ -191,6 +374,7 @@
 		A79544751BC3FC5D00EC73B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A7E7B6932539DFFF005B1EDA /* storeKitTestReceipt */,
 				A7E815E21BC531AB00127748 /* receipt */,
 				A79544771BC3FC5D00EC73B1 /* sandboxReceipt */,
 			);
@@ -226,6 +410,47 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		A7C39E39253C810300D9DCB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7C39E58253C810400D9DCB3 /* libDTFoundation.a */,
+				A7C39E5A253C810400D9DCB3 /* libStatic Library (tvOS).a */,
+				A7C39E5C253C810400D9DCB3 /* libDTFoundation_Mac.a */,
+				A7C39E5E253C810400D9DCB3 /* libDTAnimatedGIF.a */,
+				A7C39E60253C810400D9DCB3 /* libDTAWS.a */,
+				A7C39E62253C810400D9DCB3 /* libDTASN1.a */,
+				A7C39E64253C810400D9DCB3 /* libDTHTMLParser_iOS.a */,
+				A7C39E66253C810400D9DCB3 /* libDTHTMLParser_Mac.a */,
+				A7C39E68253C810400D9DCB3 /* libDTProgressHUD_iOS.a */,
+				A7C39E6A253C810400D9DCB3 /* libDTReachability_iOS.a */,
+				A7C39E6C253C810400D9DCB3 /* libDTReachability_Mac.a */,
+				A7C39E6E253C810400D9DCB3 /* libDTSQLite_iOS.a */,
+				A7C39E70253C810400D9DCB3 /* libDTSQLite_Mac.a */,
+				A7C39E72253C810400D9DCB3 /* libDTUTI_iOS.a */,
+				A7C39E74253C810400D9DCB3 /* libDTUTI_Mac.a */,
+				A7C39E76253C810400D9DCB3 /* libDTZipArchive_iOS.a */,
+				A7C39E78253C810400D9DCB3 /* libDTZipArchive_Mac.a */,
+				A7C39E7A253C810400D9DCB3 /* DTAnimatedGIF Demo.app */,
+				A7C39E7C253C810400D9DCB3 /* DTProgressHUD Demo.app */,
+				A7C39E7E253C810400D9DCB3 /* DTReachability Demo.app */,
+				A7C39E80253C810400D9DCB3 /* DTSidePanels Demo.app */,
+				A7C39E82253C810400D9DCB3 /* DTZipArchive.app */,
+				A7C39E84253C810400D9DCB3 /* DTActionSheet Demo.app */,
+				A7C39E86253C810400D9DCB3 /* Unit Tests.xctest */,
+				A7C39E88253C810400D9DCB3 /* DTFoundation.framework */,
+				A7C39E8A253C810400D9DCB3 /* DTFoundation.framework */,
+				A7C39E8C253C810400D9DCB3 /* DTFoundation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7E7B70F2539E13F005B1EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -252,16 +477,19 @@
 			buildRules = (
 			);
 			dependencies = (
-				A70247BF1BC576470070DACA /* PBXTargetDependency */,
+				A7C39DFC253A497D00D9DCB3 /* PBXTargetDependency */,
 			);
 			name = "Demo (iOS)";
+			packageProductDependencies = (
+				A7C39DF3253A492900D9DCB3 /* Kvitto */,
+			);
 			productName = "Kvitto Demo";
 			productReference = A70247891BC5763D0070DACA /* KvittoDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A795445B1BC3FC1600EC73B1 /* Kvitto */ = {
+		A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */;
+			buildConfigurationList = A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */;
 			buildPhases = (
 				A79544571BC3FC1600EC73B1 /* Sources */,
 				A79544581BC3FC1600EC73B1 /* Frameworks */,
@@ -272,12 +500,12 @@
 			);
 			dependencies = (
 			);
-			name = Kvitto;
+			name = "Kvitto (iOS)";
 			packageProductDependencies = (
-				A7C567102514DEE200463F1B /* DTFoundation */,
+				A7C39EB7253C81D000D9DCB3 /* DTFoundation */,
 			);
 			productName = DTSalesReceipt;
-			productReference = A795445C1BC3FC1600EC73B1 /* Kvitto.framework */;
+			productReference = A795445C1BC3FC1600EC73B1 /* Kvitto_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A79544641BC3FC1600EC73B1 /* Unit Tests */ = {
@@ -291,9 +519,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				A79544681BC3FC1600EC73B1 /* PBXTargetDependency */,
+				A7C39E01253A49B000D9DCB3 /* PBXTargetDependency */,
 			);
 			name = "Unit Tests";
+			packageProductDependencies = (
+				A7C39E02253A49B500D9DCB3 /* Kvitto */,
+			);
 			productName = DTSalesReceiptTests;
 			productReference = A79544651BC3FC1600EC73B1 /* Unit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -337,14 +568,212 @@
 			);
 			productRefGroup = A79541C21BC3FA2000EC73B1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A7C39E39253C810300D9DCB3 /* Products */;
+					ProjectRef = A7C39E38253C810300D9DCB3 /* DTFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				A795445B1BC3FC1600EC73B1 /* Kvitto */,
+				A795445B1BC3FC1600EC73B1 /* Kvitto (iOS) */,
 				A79544641BC3FC1600EC73B1 /* Unit Tests */,
 				A70247881BC5763D0070DACA /* Demo (iOS) */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A7C39E58253C810400D9DCB3 /* libDTFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTFoundation.a;
+			remoteRef = A7C39E57253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E5A253C810400D9DCB3 /* libStatic Library (tvOS).a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libStatic Library (tvOS).a";
+			remoteRef = A7C39E59253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E5C253C810400D9DCB3 /* libDTFoundation_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTFoundation_Mac.a;
+			remoteRef = A7C39E5B253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E5E253C810400D9DCB3 /* libDTAnimatedGIF.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTAnimatedGIF.a;
+			remoteRef = A7C39E5D253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E60253C810400D9DCB3 /* libDTAWS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTAWS.a;
+			remoteRef = A7C39E5F253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E62253C810400D9DCB3 /* libDTASN1.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTASN1.a;
+			remoteRef = A7C39E61253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E64253C810400D9DCB3 /* libDTHTMLParser_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTHTMLParser_iOS.a;
+			remoteRef = A7C39E63253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E66253C810400D9DCB3 /* libDTHTMLParser_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTHTMLParser_Mac.a;
+			remoteRef = A7C39E65253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E68253C810400D9DCB3 /* libDTProgressHUD_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTProgressHUD_iOS.a;
+			remoteRef = A7C39E67253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E6A253C810400D9DCB3 /* libDTReachability_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTReachability_iOS.a;
+			remoteRef = A7C39E69253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E6C253C810400D9DCB3 /* libDTReachability_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTReachability_Mac.a;
+			remoteRef = A7C39E6B253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E6E253C810400D9DCB3 /* libDTSQLite_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTSQLite_iOS.a;
+			remoteRef = A7C39E6D253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E70253C810400D9DCB3 /* libDTSQLite_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTSQLite_Mac.a;
+			remoteRef = A7C39E6F253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E72253C810400D9DCB3 /* libDTUTI_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTUTI_iOS.a;
+			remoteRef = A7C39E71253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E74253C810400D9DCB3 /* libDTUTI_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTUTI_Mac.a;
+			remoteRef = A7C39E73253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E76253C810400D9DCB3 /* libDTZipArchive_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTZipArchive_iOS.a;
+			remoteRef = A7C39E75253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E78253C810400D9DCB3 /* libDTZipArchive_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTZipArchive_Mac.a;
+			remoteRef = A7C39E77253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E7A253C810400D9DCB3 /* DTAnimatedGIF Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTAnimatedGIF Demo.app";
+			remoteRef = A7C39E79253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E7C253C810400D9DCB3 /* DTProgressHUD Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTProgressHUD Demo.app";
+			remoteRef = A7C39E7B253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E7E253C810400D9DCB3 /* DTReachability Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTReachability Demo.app";
+			remoteRef = A7C39E7D253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E80253C810400D9DCB3 /* DTSidePanels Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTSidePanels Demo.app";
+			remoteRef = A7C39E7F253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E82253C810400D9DCB3 /* DTZipArchive.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DTZipArchive.app;
+			remoteRef = A7C39E81253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E84253C810400D9DCB3 /* DTActionSheet Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "DTActionSheet Demo.app";
+			remoteRef = A7C39E83253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E86253C810400D9DCB3 /* Unit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit Tests.xctest";
+			remoteRef = A7C39E85253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E88253C810400D9DCB3 /* DTFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTFoundation.framework;
+			remoteRef = A7C39E87253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E8A253C810400D9DCB3 /* DTFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTFoundation.framework;
+			remoteRef = A7C39E89253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7C39E8C253C810400D9DCB3 /* DTFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTFoundation.framework;
+			remoteRef = A7C39E8B253C810400D9DCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A70247871BC5763D0070DACA /* Resources */ = {
@@ -355,6 +784,7 @@
 				A70247DB1BC5775E0070DACA /* Main.storyboard in Resources */,
 				A70247DC1BC5789A0070DACA /* sandboxReceipt in Resources */,
 				A70247D91BC577520070DACA /* Assets.xcassets in Resources */,
+				A7E7B6902539DF7C005B1EDA /* storeKitTestReceipt in Resources */,
 				A70247DA1BC577560070DACA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +800,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E7B7132539E17C005B1EDA /* storeKitTestReceipt in Resources */,
 				A7BEDD7D1BC58AB000A4BFAB /* newReceipt in Resources */,
 				A795449A1BC3FFB900EC73B1 /* sandboxReceipt in Resources */,
 				A7BEDD611BC589DF00A4BFAB /* receipt in Resources */,
@@ -411,15 +842,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A70247BF1BC576470070DACA /* PBXTargetDependency */ = {
+		A7C39DFC253A497D00D9DCB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A795445B1BC3FC1600EC73B1 /* Kvitto */;
-			targetProxy = A70247BE1BC576470070DACA /* PBXContainerItemProxy */;
+			productRef = A7C39DFB253A497D00D9DCB3 /* Kvitto */;
 		};
-		A79544681BC3FC1600EC73B1 /* PBXTargetDependency */ = {
+		A7C39E01253A49B000D9DCB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A795445B1BC3FC1600EC73B1 /* Kvitto */;
-			targetProxy = A79544671BC3FC1600EC73B1 /* PBXContainerItemProxy */;
+			productRef = A7C39E00253A49B000D9DCB3 /* Kvitto */;
 		};
 /* End PBXTargetDependency section */
 
@@ -470,7 +899,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.4;
+				CURRENT_PROJECT_VERSION = 1.0.5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -515,7 +944,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
-				PRODUCT_NAME = Kvitto;
+				PRODUCT_NAME = Kvitto_iOS;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -624,7 +1053,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.4;
+				CURRENT_PROJECT_VERSION = 1.0.5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -678,7 +1107,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1.0.4;
+				CURRENT_PROJECT_VERSION = 1.0.5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -716,7 +1145,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
-				PRODUCT_NAME = Kvitto;
+				PRODUCT_NAME = Kvitto_iOS;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -741,7 +1170,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cocoanetics.DTSalesReceipt;
-				PRODUCT_NAME = Kvitto;
+				PRODUCT_NAME = Kvitto_iOS;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -805,7 +1234,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto" */ = {
+		A795446D1BC3FC1600EC73B1 /* Build configuration list for PBXNativeTarget "Kvitto (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A795446E1BC3FC1600EC73B1 /* Debug */,
@@ -832,16 +1261,31 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Cocoanetics/DTFoundation.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.7.15;
+				branch = develop;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A7C567102514DEE200463F1B /* DTFoundation */ = {
+		A7C39DF3253A492900D9DCB3 /* Kvitto */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A7C5670F2514DEE200463F1B /* XCRemoteSwiftPackageReference "DTFoundation" */;
+			productName = Kvitto;
+		};
+		A7C39DFB253A497D00D9DCB3 /* Kvitto */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Kvitto;
+		};
+		A7C39E00253A49B000D9DCB3 /* Kvitto */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Kvitto;
+		};
+		A7C39E02253A49B500D9DCB3 /* Kvitto */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Kvitto;
+		};
+		A7C39EB7253C81D000D9DCB3 /* DTFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = DTFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */
