@@ -9,4 +9,5 @@ xcuserdata
 .swiftpm
 .dependencies
 .derivedData
+docs
 package.resolved

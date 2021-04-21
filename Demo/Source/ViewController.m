@@ -89,7 +89,7 @@
     [vendorIdentifier getUUIDBytes:uuid];
     NSData *vendorData = [NSData dataWithBytes:uuid length:16];
     
-    // concacentate data for vendor identifier, opaque value and bundle identifier
+    // concatenate data for vendor identifier, opaque value and bundle identifier
     NSMutableData *hashData = [NSMutableData new];
     [hashData appendData:vendorData];
     [hashData appendData:receipt.opaqueValue];

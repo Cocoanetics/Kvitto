@@ -82,12 +82,15 @@ internal func _dateFromData(_ data: Data) throws -> Date?
     return date
 }
 
+private let rfc3339DateFormatter: DateFormatter = {
+  let dateFormatter = DateFormatter()
+  dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+  dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+  return dateFormatter
+}()
+
 internal func _dateFromRFC3339String(_ string: String) -> Date?
 {
-    let rfc3339DateFormatter = DateFormatter()
-    rfc3339DateFormatter.locale = Locale(identifier: "en_US_POSIX")
-    rfc3339DateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-	
 	if string.hasSuffix("Z")
 	{
 		if string.count == 24  // e.g. 2020-09-27T12:07:19.686Z
