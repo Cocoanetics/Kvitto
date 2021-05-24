@@ -73,6 +73,11 @@ import DTFoundation
     */
     fileprivate(set) public var cancellationDate: Date?
     
+	/**
+	For an auto-renewable subscription, whether or not it is in the introductory price period.
+	*/
+	fileprivate(set) public var isSubscriptionIntroductoryPricePeriod: Bool?
+	
     /**
     The primary key for identifying subscription purchases.
     */
@@ -163,6 +168,9 @@ import DTFoundation
             
         case 1712:
             cancellationDate = try _dateFromData(data)
+			
+		case 1719:
+			isSubscriptionIntroductoryPricePeriod = try _intFromData(data) != 0
             
         default:
             // all other types are private
