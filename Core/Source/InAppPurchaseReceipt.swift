@@ -76,7 +76,7 @@ import DTFoundation
 	/**
 	For an auto-renewable subscription, whether or not it is in the introductory price period.
 	*/
-	fileprivate(set) public var isSubscriptionIntroductoryPricePeriod: Bool?
+	fileprivate(set) public var isSubscriptionIntroductoryPricePeriod: Bool = false
 	
     /**
     The primary key for identifying subscription purchases.
