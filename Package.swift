@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Cocoanetics/DTFoundation.git", 
-		from: "1.7.16"),
+		from: "1.7.18"),
     ],
     targets: [
         .target(
