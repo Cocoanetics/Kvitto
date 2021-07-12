@@ -54,12 +54,14 @@ import DTFoundation
         if let sequence = sequence[1] as? [AnyObject],
 		   sequence.count == 1
         {
+			// no extra context containers
 			containedSequence = sequence
         }
 		else if let context = sequence[1] as? [Int: AnyObject],
 				let contained = context[0] as? [AnyObject],
 				let sequence = contained[0] as? [AnyObject]
 		{
+			// container with context 0
 			containedSequence = sequence
 		}
 		else
