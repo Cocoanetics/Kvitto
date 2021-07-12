@@ -33,24 +33,40 @@ import DTFoundation
         
         guard let rootSequence = DTASN1Serialization.object(with: data) as? [AnyObject],
                     let unwrappedData = unwrapRootSequence(rootSequence)
-        else { return nil }
+        else {
+			return nil
+		}
 
         payloadData = unwrappedData
     }
     
     func unwrapRootSequence(_ sequence: [AnyObject]) -> Data?
     {
-        guard sequence.count==2,
-              let OID = sequence[0] as? String, OID == "1.2.840.113549.1.7.2",
-              let containedSequence = sequence[1] as? [AnyObject], containedSequence.count == 1,
+		guard sequence.count==2,
+			  let OID = sequence[0] as? String,
+			  OID == "1.2.840.113549.1.7.2" else
+		{
+			return nil
+		}
+		
+        if let containedSequence = sequence[1] as? [AnyObject], containedSequence.count == 1,
               let actualSequence = containedSequence[0] as? [AnyObject], actualSequence.count > 2,
               let dataSequence = actualSequence[2] as? [AnyObject]
-        else
         {
-            return nil
+			print("old")
+			
+			return unwrapSignedDataSequence(dataSequence)
         }
-        
-        return unwrapSignedDataSequence(dataSequence)
+		else if let context = sequence[1] as? [Int: AnyObject],
+				let contained = context[0] as? [AnyObject],
+				let containedSequence = contained.last as? [AnyObject],
+				let actualSequence = containedSequence.last as? [AnyObject],
+				let dataSequence = actualSequence[2] as? [AnyObject]
+		{
+			return unwrapSignedDataSequence(dataSequence)
+		}
+		
+		return nil
     }
     
     func unwrapSignedDataSequence(_ sequence: [AnyObject]) -> Data?
@@ -62,20 +78,28 @@ import DTFoundation
         {
             return nil
         }
-
-		if let dataSequence = sequence[1] as? [Data],
-			dataSequence.count == 1
-		{
-			return dataSequence[0]
-		}
 		
-		if let array = sequence[1] as? [[Data]],
-		   let dataSequence = array.first,
-		   dataSequence.count == 1
+		if let context = sequence[1] as? [Int: AnyObject],
+		   let contents = context[0]
 		{
-			return dataSequence[0]
+			return unwrapData(from: contents)
 		}
-		
-		return nil
+		else
+		{
+			return unwrapData(from: sequence[1])
+		}
     }
+}
+
+fileprivate func unwrapData(from object: AnyObject) -> Data?
+{
+	var currentObject = object
+	
+	while let array = currentObject as? [AnyObject],
+		  array.count == 1
+	{
+		currentObject = array.first!
+	}
+	
+	return currentObject as? Data
 }
