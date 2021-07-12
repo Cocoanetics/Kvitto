@@ -49,12 +49,12 @@ import DTFoundation
 			return nil
 		}
 		
-        if let containedSequence = sequence[1] as? [AnyObject], containedSequence.count == 1,
-              let actualSequence = containedSequence[0] as? [AnyObject], actualSequence.count > 2,
+        if let containedSequence = sequence[1] as? [AnyObject],
+		   containedSequence.count == 1,
+              let actualSequence = containedSequence[0] as? [AnyObject],
+			  actualSequence.count > 2,
               let dataSequence = actualSequence[2] as? [AnyObject]
         {
-			print("old")
-			
 			return unwrapSignedDataSequence(dataSequence)
         }
 		else if let context = sequence[1] as? [Int: AnyObject],
