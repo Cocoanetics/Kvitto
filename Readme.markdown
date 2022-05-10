@@ -9,7 +9,9 @@ Allows parsing an validation of iTunes App Store receipts. Receipts also contain
 Documentation
 -------------
 
-Look at the included Demo app's [ViewController](https://github.com/Cocoanetics/Kvitto/blob/develop/Demo/Source/ViewController.m#L50-L109) to see how to load and validate a Store receipt locally. This sample is in Objective-C to demonstrate the Kvitto - although written in Swift - can also be used from Objective-C code.
+Look at the included Demo app's [ViewController](https://github.com/Cocoanetics/Kvitto/blob/develop/Demo/Source/ViewController.m#L50-L109) to see how to load and validate a Store receipt locally. This sample is in Objective-C to demonstrate the Kvitto - although written in Swift - can also be used from Objective-C code.  
+
+There is also a pure [Swift Demo](https://github.com/Cocoanetics/Kvitto/blob/develop/Demo/Swift/ValidateReceipt.swift) function.  
 
 License
 -------
